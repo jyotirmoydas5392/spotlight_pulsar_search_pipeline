@@ -96,7 +96,7 @@ def first_stage_candidate_sifting(file, node_alias, gpu_id, data_id):
     os.makedirs(rename_output_path, exist_ok=True)
 
     # Perform AA output renaming
-    aa_output_rename(rename_input_path, rename_output_path, fil_file, search_type, params.get("harmonic_sum_flag"))
+    aa_output_rename(rename_input_path, rename_output_path, fil_file, search_type)
 
     # Set up parameters for candidate sifting
     sifting_input_path = os.path.join(rename_output_dir, file.replace(".txt", ""))

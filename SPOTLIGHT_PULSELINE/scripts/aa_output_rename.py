@@ -4,7 +4,7 @@ import struct
 import shutil
 import numpy as np
 
-def aa_output_rename(input_dir, output_dir, file_name, search_type, harmonic_sum_flag):
+def aa_output_rename(input_dir, output_dir, file_name, search_type):
     """
     Renames or copies files in the input directory that match the pattern based on harmonic_sum_flag 
     and saves them in the output directory with a new name based on the DM value.
@@ -62,7 +62,7 @@ def aa_output_rename(input_dir, output_dir, file_name, search_type, harmonic_sum
         print(f"Renaming and saving all the periodicity output for further processing for file {file_name} complete....")
 
     elif search_type == 1:
-        all_files = glob.glob(os.path.join(input_dir, "acc_list_*dat"))
+        all_files = glob.glob(os.path.join(input_dir, "acc_list*dat"))
         
         if not all_files:
             info_file = os.path.join(output_dir, "information.txt")
@@ -71,15 +71,7 @@ def aa_output_rename(input_dir, output_dir, file_name, search_type, harmonic_sum
             print("No output files found. Information note saved.")
             return
 
-        if harmonic_sum_flag == 0:
-            files = [f for f in all_files if "harm_" not in f]
-        elif harmonic_sum_flag == 1:
-            files = [f for f in all_files if "harm_" in f]
-        else:
-            print("Invalid harmonic_sum_flag value.")
-            return
-
-        valid_files = [f for f in files if os.path.getsize(f) > 0]
+        valid_files = [f for f in all_files if os.path.getsize(f) > 0]
         
         if not valid_files:
             info_file = os.path.join(output_dir, "information.txt")

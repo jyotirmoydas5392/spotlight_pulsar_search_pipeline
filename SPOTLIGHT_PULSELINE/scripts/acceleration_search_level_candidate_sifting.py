@@ -124,7 +124,6 @@ def acceleartion_search_level_sift_candidates(input_dir, output_dir, file_name, 
 
     # Initialize arrays for candidate parameters
     Period_dot_array = np.full((len(DM_array), max_cand_len), np.nan)
-    r_bin_array = np.full((len(DM_array), max_cand_len), np.nan)
     Period_array = np.full((len(DM_array), max_cand_len), np.nan)
     SNR_array = np.full((len(DM_array), max_cand_len), np.nan)
     Power_array = np.full((len(DM_array), max_cand_len), np.nan)
@@ -149,30 +148,30 @@ def acceleartion_search_level_sift_candidates(input_dir, output_dir, file_name, 
         cand_array_len = len(A0[:,0])
         
         for j in range(0, int(cand_array_len)):
-            if low_period <= np.multiply(np.divide(1.0, A0[j][3]), 1000) <= high_period:
+            if low_period <= np.divide(1.0, A0[j][3]) <= high_period:
             
                 Period_dot_array[i][j] = np.divide(np.multiply(A0[j][1], np.divide(1.0, A0[j][3])), c)
-                r_bin_array[i][j] = A0[j][2]
-                Period_array[i][j] = np.divide(1.0, A0[j][3]) # In seconds
+                Period_array[i][j] = np.divide(np.divide(1.0, A0[j][3])) # In seconds
                 Power_array[i][j] = A0[j][4]
                 SNR_array[i][j] = A0[j][5]
 
     print(f"Finished processing candidate data for {len(DM_array)} DM trials.")
 
-    # Unique r_bin filtering
-    r_bin_flatten = r_bin_array.flatten()
-    filtered_r_bin_list0 = [x for x in np.unique(r_bin_flatten) if str(x) != 'nan']
-    print(filtered_r_bin_list0)
-    tot_cand = len(filtered_r_bin_list0)
-    uniq_r_bin_list0, r_tol_array = [], []
+    # Unique Period filtering
+    Period_flatten = Period_array.flatten()
+    filtered_period_list0 = [x for x in np.unique(Period_flatten) if str(x) != 'nan']
+    print(filtered_period_list0)
+    tot_cand = len(filtered_period_list0)
+    uniq_period_list0 = []
+    period_tol_array = []
 
-    print(f"Filtered unique r_bin list length: {len(filtered_r_bin_list0)}")
+    print(f"Filtered unique Period list length: {len(filtered_period_list0)}")
 
-    while len(filtered_r_bin_list0) > 0:
-        indices = np.where(filtered_r_bin_list0 <= filtered_r_bin_list0[0] + filtered_r_bin_list0[0] * (period_tol_init_sort / 100.0))
-        uniq_r_bin_list0.append(filtered_r_bin_list0[0])
-        r_tol_array.append(filtered_r_bin_list0[0] * (period_tol_init_sort / 100.0))
-        filtered_r_bin_list0 = np.delete(filtered_r_bin_list0, indices[0])
+    while len(filtered_period_list0) > 0:
+        indices = np.where(filtered_period_list0 <= filtered_period_list0[0] + period_tol_init_sort / 100.0)
+        period_tol_array.append(filtered_period_list0[0] * (period_tol_init_sort / 100.0))
+        uniq_period_list0.append(filtered_period_list0[0])
+        filtered_period_list0 = np.delete(filtered_period_list0, indices[0])
 
     # Final filtering and output
     output_file = os.path.join(output_dir, f"{file_name}_all_sifted_candidates.txt")
@@ -181,12 +180,13 @@ def acceleartion_search_level_sift_candidates(input_dir, output_dir, file_name, 
 
     print(f"Writing output to {output_file}")
 
-    for i, uniq_r_bin in enumerate(uniq_r_bin_list0):
+    # Now the sorting begins
+    for i, uniq_period in enumerate(uniq_period_list0):
         if i == 0:
-            index = np.where(r_bin_array <= uniq_r_bin + r_tol_array[i] / 2)
+            index = np.where(Period_array <= uniq_period + period_tol_array[i] / 2)
         else:
-            index = np.where((r_bin_array > uniq_r_bin_list0[i - 1] + r_tol_array[i - 1] / 2) &
-                             (r_bin_array <= uniq_r_bin + r_tol_array[i] / 2))
+            index = np.where((Period_array > uniq_period_list0[i - 1] + period_tol_array[i - 1] / 2) &
+                            (Period_array <= uniq_period + period_tol_array[i] / 2))
 
         DM_index, cand_index = index[0], index[1]
         DM_groups = consecutive(np.unique(DM_index))

@@ -1,4 +1,4 @@
-ght###########################################################
+###########################################################
 #                    CONFIGURATION FILE                   #
 #  Parameters and Directories for Pulsar Search Pipeline  #
 ###########################################################
@@ -19,7 +19,7 @@ environ_init_script           = /lustre_archive/apps/tdsoft/env.sh
 #----------------------------------------
 # Search type flag
 #----------------------------------------
-search_type = 0               # Zero for Periodicity search, 1 for Acceleration search
+search_type = 1               # Zero for Periodicity search, 1 for Acceleration search
 
 
 #----------------------------------------
@@ -49,7 +49,7 @@ fil_flag = FilData
 num_jobs = 20
 
 # Cores to use per node, for all kind of parallel processing except filterbank conversion
-workers_per_node = 20
+workers_per_node = 2
 
 # Some important module paths
 file_remove_module_path = /lustre_data/spotlight/data/pulsar_search_pipeline_ver0/scripts/remove_files.py
@@ -105,7 +105,7 @@ beam_level_folding_path       = /lustre_data/spotlight/data/pulsar_search_pipeli
 #----------------------------------------
 
 # Directories for Classifier input, output, and flags
-do_classify = 1                # Zero for no classification, and one for candidate classification
+do_classify = 0                # Zero for no classification, and one for candidate classification
 python2_env_path              = "/lustre_archive/apps/tdsoft/conda/envs/py2_env/bin/python2"
 classifier_output_dir         = /lustre_data/spotlight/data/PULSAR_CLASSFIER_OUTPUT_DATA/
 machine_learning_files_path   = /lustre_data/spotlight/data/pulsar_search_pipeline_ver0/Machine_learning/
@@ -133,6 +133,6 @@ avail_gpus_file_dir           = /lustre_data/spotlight/data/pulsar_search_pipeli
 avail_cpus_file_dir           = /lustre_data/spotlight/data/pulsar_search_pipeline_ver0/GPU_resources/
 
 # Processing delays for GPU and CPU (in seconds)
-gpu_0_start_delay             = 1         # Delay before starting GPU 0
-gpu_1_start_delay             = 2        # Delay before starting GPU 1
-file_processing_delay         = 1         # Delay between processing consecutive file
+gpu_0_start_delay             = 3         # Delay before starting GPU 0
+gpu_1_start_delay             = 5        # Delay before starting GPU 1
+file_processing_delay         = 3         # Delay between processing consecutive file

@@ -158,7 +158,7 @@ def main():
         # elif flag == "OFF":
         #     print(f"[{i}] Flag is OFF. Proceeding with this iteration.")
 
-        
+
         #Extract the SCAN ID, data ID, band ID etc (observation informations)
         scan_id = str(GTAC_scan[i])
         data_id = str(Target[i])
@@ -177,37 +177,37 @@ def main():
         log_output_path = os.path.join(log_base_dir, data_id)
         os.makedirs(os.path.join(log_output_path, data_id), exist_ok=True)
 
-        # Step 3: Clean the directories for making the pipeline able to rerun on same data without any errors.
-        # Loop for multiple directory
-        for directory in [
-            aa_output_path,
-            log_output_path,
-            os.path.join(pulseline_input_dir, data_id),
-            os.path.join(pulseline_output_dir, data_id)
-        ]:
-            print(f"Starting cleaning of directory: {directory} on node: {common_node_id}")
+        # # Step 3: Clean the directories for making the pipeline able to rerun on same data without any errors.
+        # # Loop for multiple directory
+        # for directory in [
+        #     aa_output_path,
+        #     log_output_path,
+        #     os.path.join(pulseline_input_dir, data_id),
+        #     os.path.join(pulseline_output_dir, data_id)
+        # ]:
+        #     print(f"Starting cleaning of directory: {directory} on node: {common_node_id}")
 
-            command = (
-                f'ssh -X {common_node_id} "'
-                f'echo Cleaning {directory} on {common_node_id} && '
-                f'source {environ_init_script} && echo Environment sourced && '
-                f'if [ -d {directory} ]; then '
-                f'  echo Directory exists. Running cleaning script. && '
-                f'  python3 {file_remove_module_path} {directory} {workers_per_node}; '
-                f'else '
-                f'  echo Directory {directory} does not exist. Skipping.; '
-                f'fi && '
-                f'echo Finished cleaning {directory}"'
-            )
+        #     command = (
+        #         f'ssh -X {common_node_id} "'
+        #         f'echo Cleaning {directory} on {common_node_id} && '
+        #         f'source {environ_init_script} && echo Environment sourced && '
+        #         f'if [ -d {directory} ]; then '
+        #         f'  echo Directory exists. Running cleaning script. && '
+        #         f'  python3 {file_remove_module_path} {directory} {workers_per_node}; '
+        #         f'else '
+        #         f'  echo Directory {directory} does not exist. Skipping.; '
+        #         f'fi && '
+        #         f'echo Finished cleaning {directory}"'
+        #     )
 
-            print(f"Running command:\n{command}\n")
+        #     print(f"Running command:\n{command}\n")
 
-            try:
-                subprocess.run(command, shell=True, check=True)
-                print(f"Successfully handled directory: {directory}\n")
-            except subprocess.CalledProcessError as e:
-                print(f"Error occurred while cleaning or creating directory: {directory}")
-                print(f"Error details: {e}\n")
+        #     try:
+        #         subprocess.run(command, shell=True, check=True)
+        #         print(f"Successfully handled directory: {directory}\n")
+        #     except subprocess.CalledProcessError as e:
+        #         print(f"Error occurred while cleaning or creating directory: {directory}")
+        #         print(f"Error details: {e}\n")
 
         # Step 4: Generate input data if needed, and input files to run the pipeline
         command = (
@@ -268,40 +268,40 @@ def main():
             'python3 {beam_level_folding_path} {node_alias} {gpu_id} {data_id}'
             '> {log_dir}/folding_cpu_log_{node_alias}_gpu_{gpu_id}.log 2>&1"'
         )
-        
-        # Step 7: Process each node concurrently for the command template 0 for runnign GPTOOL based RFI mitigation
-        if run_gptool == 1:
-            processes = []
-            for node_alias in avail_gpu_nodes:
-                p = Process(
-                    target=multi_node_rfi_mitigation,
-                    args=(
-                        node_alias, data_id, scan_id, band_id, pulseline_input_file_dir, log_output_path, gpu_0_start_delay, gpu_1_start_delay, file_processing_delay, command_template_0)
-                )
-                processes.append(p)
-                p.start()
 
-            for p in processes:
-                p.join()
+        # # Step 7: Process each node concurrently for the command template 0 for runnign GPTOOL based RFI mitigation
+        # if run_gptool == 1:
+        #     processes = []
+        #     for node_alias in avail_gpu_nodes:
+        #         p = Process(
+        #             target=multi_node_rfi_mitigation,
+        #             args=(
+        #                 node_alias, data_id, scan_id, band_id, pulseline_input_file_dir, log_output_path, gpu_0_start_delay, gpu_1_start_delay, file_processing_delay, command_template_0)
+        #         )
+        #         processes.append(p)
+        #         p.start()
 
-            os.system("sleep 2")  # Sleeps for 2 seconds
+        #     for p in processes:
+        #         p.join()
+
+        #     os.system("sleep 2")  # Sleeps for 2 seconds
 
 
-        # Step 8: Process each node concurrently for the command template 1 for running AA pulsar search
-        processes = []
-        for node_alias in avail_gpu_nodes:
-            p = Process(
-                target=process_node,
-                args=(
-                    node_alias, data_id, aa_input_file_dir, aa_output_path, log_output_path, gpu_0_start_delay, gpu_1_start_delay, file_processing_delay, command_template_1)
-            )
-            processes.append(p)
-            p.start()
+        # # Step 8: Process each node concurrently for the command template 1 for running AA pulsar search
+        # processes = []
+        # for node_alias in avail_gpu_nodes:
+        #     p = Process(
+        #         target=process_node,
+        #         args=(
+        #             node_alias, data_id, aa_input_file_dir, aa_output_path, log_output_path, gpu_0_start_delay, gpu_1_start_delay, file_processing_delay, command_template_1)
+        #     )
+        #     processes.append(p)
+        #     p.start()
 
-        for p in processes:
-            p.join()
+        # for p in processes:
+        #     p.join()
 
-        os.system("sleep 2")  # Sleeps for 2 seconds
+        # os.system("sleep 2")  # Sleeps for 2 seconds
 
 
         # Step 9: Process each node concurrently for the command template 2 for running first stage sifting in a parallel manner
@@ -322,128 +322,128 @@ def main():
 
 
         # Step 10: Process all the search level sifted candidates output at once in common GPU node to do a beam level candidate filtration
-        if beam_level_sifting == 1:
-            command = (
-                f'ssh -X {common_node_id} "'
-                f'echo Step 1: Connecting to {common_node_id} && '
-                f'source {environ_init_script} && echo Step 2: Environment Loaded && '
-                f'which python3 && echo Step 3: Python Located && '
-                f'ls -l {final_stage_sifting_path} && echo Step 4: Checking Script Permissions && '
-                f'python3 {final_stage_sifting_path} {scan_id} {data_id} {data_type} && echo Step 5: Python Script Executed '
-                f'>> {log_output_path}/beam_sifting_cpu_log_common_node_{common_node_id}.log 2>&1"'
-            )
+        # if beam_level_sifting == 1:
+        #     command = (
+        #         f'ssh -X {common_node_id} "'
+        #         f'echo Step 1: Connecting to {common_node_id} && '
+        #         f'source {environ_init_script} && echo Step 2: Environment Loaded && '
+        #         f'which python3 && echo Step 3: Python Located && '
+        #         f'ls -l {final_stage_sifting_path} && echo Step 4: Checking Script Permissions && '
+        #         f'python3 {final_stage_sifting_path} {scan_id} {data_id} {data_type} && echo Step 5: Python Script Executed '
+        #         f'>> {log_output_path}/beam_sifting_cpu_log_common_node_{common_node_id}.log 2>&1"'
+        #     )
 
-            # Print the command for manual testing
-            print(f"\nRunning SSH Command:\n{command}\n")
+        #     # Print the command for manual testing
+        #     print(f"\nRunning SSH Command:\n{command}\n")
 
-            # Execute the SSH command
-            try:
-                subprocess.run(command, shell=True, check=True)
-            except subprocess.CalledProcessError as e:
-                print(f"Error: SSH command failed with return code {e.returncode}")
-                print(f"Check log file: {log_output_path}/beam_sifting_cpu_log_common_node_{common_node_id}.log")
-
-
-        print(f"Beam level sifting completed for all the initial sorted candidates.")
-
-        os.system("sleep 2")  # Sleeps for 2 seconds
+        #     # Execute the SSH command
+        #     try:
+        #         subprocess.run(command, shell=True, check=True)
+        #     except subprocess.CalledProcessError as e:
+        #         print(f"Error: SSH command failed with return code {e.returncode}")
+        #         print(f"Check log file: {log_output_path}/beam_sifting_cpu_log_common_node_{common_node_id}.log")
 
 
-        # Step 11: Process each node concurrently for the command template 3 for multinode CPU folding
-        processes = []
-        for node_alias in avail_gpu_nodes:
-            p = Process(
-                target=multi_node_folding,
-                args=(
-                    node_alias, data_id, log_output_path, gpu_0_start_delay, gpu_1_start_delay, file_processing_delay, command_template_3)
-            )
-            processes.append(p)
-            p.start()
+        # print(f"Beam level sifting completed for all the initial sorted candidates.")
 
-        for p in processes:
-            p.join()
-
-        print(f"Folding completed for all the filtered candidates.")
-
-        os.system("sleep 2")  # Sleeps for 2 seconds
+        # os.system("sleep 2")  # Sleeps for 2 seconds
 
 
-        # Step 12: Process all the folded candidate output PFDs for classification
-        if do_classify == 1:
-            if not candidate_classifier_path:
-                print("Error: Missing required path for candidate classification.")
-                sys.exit(1)
+        # # Step 11: Process each node concurrently for the command template 3 for multinode CPU folding
+        # processes = []
+        # for node_alias in avail_gpu_nodes:
+        #     p = Process(
+        #         target=multi_node_folding,
+        #         args=(
+        #             node_alias, data_id, log_output_path, gpu_0_start_delay, gpu_1_start_delay, file_processing_delay, command_template_3)
+        #     )
+        #     processes.append(p)
+        #     p.start()
 
-            # Construct SSH command with debugging
-            command = (
-                f'ssh -X {common_node_id} "'
-                f'echo Step 1: Connecting to {common_node_id} && '
-                f'source {environ_init_script} && echo Step 2: Environment Loaded && '
-                f'which python3 && echo Step 3: Python Located && '
-                f'ls -l {candidate_classifier_path} && echo Step 4: Checking Script Permissions && '
-                f'python3 {candidate_classifier_path} {data_id} && echo Step 5: Python Script Executed '
-                f'>> {log_output_path}/classification_cpu_log_common_node_{common_node_id}.log 2>&1"'
-            )
+        # for p in processes:
+        #     p.join()
 
-            # Print the command for debugging
-            print(f"\nRunning SSH Command:\n{command}\n")
+        # print(f"Folding completed for all the filtered candidates.")
 
-            # Execute the command
-            try:
-                subprocess.run(command, shell=True, check=True)
-                print("Classification completed for all the folded candidates.")
-            except subprocess.CalledProcessError as e:
-                print(f"Error: SSH command failed with return code {e.returncode}")
-                print(f"Check log file: {log_output_path}/classification_cpu_log_common_node_{common_node_id}.log")
-
-        else:
-            print("You chose not to run the classifier to classify the candidates.")
-
-        os.system("sleep 2")  # Sleeps for 2 seconds
+        # os.system("sleep 2")  # Sleeps for 2 seconds
 
 
-        # Step 13: Generate the final outputs and summary plots for sorted candidates
-        if not final_outputs_script_path:
-            print("Error: Missing required path for final outputs generation.")
-            sys.exit(1)
+        # # Step 12: Process all the folded candidate output PFDs for classification
+        # if do_classify == 1:
+        #     if not candidate_classifier_path:
+        #         print("Error: Missing required path for candidate classification.")
+        #         sys.exit(1)
 
-        if not summary_plot_code_path:
-            print("Error: Missing required path for summary plot generation.")
-            sys.exit(1)
+        #     # Construct SSH command with debugging
+        #     command = (
+        #         f'ssh -X {common_node_id} "'
+        #         f'echo Step 1: Connecting to {common_node_id} && '
+        #         f'source {environ_init_script} && echo Step 2: Environment Loaded && '
+        #         f'which python3 && echo Step 3: Python Located && '
+        #         f'ls -l {candidate_classifier_path} && echo Step 4: Checking Script Permissions && '
+        #         f'python3 {candidate_classifier_path} {data_id} && echo Step 5: Python Script Executed '
+        #         f'>> {log_output_path}/classification_cpu_log_common_node_{common_node_id}.log 2>&1"'
+        #     )
 
-        # Construct SSH command with additional debug checks
-        command = (
-            f'ssh -X {common_node_id} "'
-            f'echo Step 1: Connecting to {common_node_id} && '
-            f'source {environ_init_script} && echo Step 2: Environment Loaded && '
-            f'which python3 && echo Step 3: Python Located && '
-            f'ls -l {final_outputs_script_path} && echo Step 4a: Final Outputs Script Found && '
-            f'python3 {final_outputs_script_path} {scan_id} {data_id} {band_id} && echo Step 4b: Final Outputs Generated && '
-            f'ls -l {summary_plot_code_path} && echo Step 5a: Summary Plot Script Found && '
-            f'python3 {summary_plot_code_path} {data_id} && echo Step 5b: Summary Plot Generated '
-            f'>> {log_output_path}/final_output_cpu_log_common_node_{common_node_id}.log 2>&1"'
-        )
+        #     # Print the command for debugging
+        #     print(f"\nRunning SSH Command:\n{command}\n")
 
-        # Print the command for debugging
-        print(f"\nRunning SSH Command:\n{command}\n")
+        #     # Execute the command
+        #     try:
+        #         subprocess.run(command, shell=True, check=True)
+        #         print("Classification completed for all the folded candidates.")
+        #     except subprocess.CalledProcessError as e:
+        #         print(f"Error: SSH command failed with return code {e.returncode}")
+        #         print(f"Check log file: {log_output_path}/classification_cpu_log_common_node_{common_node_id}.log")
 
-        # Execute the command
-        try:
-            subprocess.run(command, shell=True, check=True)
-            print("Final outputs and summary plots generated successfully.")
-        except subprocess.CalledProcessError as e:
-            print(f"Error: SSH command failed with return code {e.returncode}")
-            print(f"Check log file: {log_output_path}/final_output_cpu_log_common_node_{common_node_id}.log")
+        # else:
+        #     print("You chose not to run the classifier to classify the candidates.")
+
+        # os.system("sleep 2")  # Sleeps for 2 seconds
 
 
-        #Track the executed targets
-        executed_targets.append(data_id)
+        # # Step 13: Generate the final outputs and summary plots for sorted candidates
+        # if not final_outputs_script_path:
+        #     print("Error: Missing required path for final outputs generation.")
+        #     sys.exit(1)
 
-        # Update report with latest executed scan info
-        with open(report_path, "a") as log_file:
-            log_file.write(f"Executed scan: {data_id}\n")
-   
- 
+        # if not summary_plot_code_path:
+        #     print("Error: Missing required path for summary plot generation.")
+        #     sys.exit(1)
+
+        # # Construct SSH command with additional debug checks
+        # command = (
+        #     f'ssh -X {common_node_id} "'
+        #     f'echo Step 1: Connecting to {common_node_id} && '
+        #     f'source {environ_init_script} && echo Step 2: Environment Loaded && '
+        #     f'which python3 && echo Step 3: Python Located && '
+        #     f'ls -l {final_outputs_script_path} && echo Step 4a: Final Outputs Script Found && '
+        #     f'python3 {final_outputs_script_path} {scan_id} {data_id} {band_id} && echo Step 4b: Final Outputs Generated && '
+        #     f'ls -l {summary_plot_code_path} && echo Step 5a: Summary Plot Script Found && '
+        #     f'python3 {summary_plot_code_path} {data_id} && echo Step 5b: Summary Plot Generated '
+        #     f'>> {log_output_path}/final_output_cpu_log_common_node_{common_node_id}.log 2>&1"'
+        # )
+
+        # # Print the command for debugging
+        # print(f"\nRunning SSH Command:\n{command}\n")
+
+        # # Execute the command
+        # try:
+        #     subprocess.run(command, shell=True, check=True)
+        #     print("Final outputs and summary plots generated successfully.")
+        # except subprocess.CalledProcessError as e:
+        #     print(f"Error: SSH command failed with return code {e.returncode}")
+        #     print(f"Check log file: {log_output_path}/final_output_cpu_log_common_node_{common_node_id}.log")
+
+
+        # #Track the executed targets
+        # executed_targets.append(data_id)
+
+        # # Update report with latest executed scan info
+        # with open(report_path, "a") as log_file:
+        #     log_file.write(f"Executed scan: {data_id}\n")
+
+
     # Final status summary (overwrite again)
     with open(report_path, "w") as log_file:
         if len(executed_targets) == 0:
@@ -452,8 +452,8 @@ def main():
             log_file.write("All targets got executed successfully for the current run.\n")
         else:
             log_file.write("Partial execution: executed scans - " + ", ".join(executed_targets) + "\n")
-                                                    
-    
+
+
     # Write "analysis_status = OFF" at the end
     with open(status_path, "w") as status_file:
         status_file.write("analysis_status = OFF\n")

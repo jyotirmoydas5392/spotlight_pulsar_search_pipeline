@@ -270,25 +270,36 @@ def calculate_beam_distances(given_beam_id, beam_data_array, invalid_beam_ids):
         return None  # Return None in case of error
 
 
-def count_consecutive_unique_beams(consequtive_beam_ids, unique_beam_ids):
+def count_consecutive_unique_beams(consequtive_beam_ids, unique_beam_ids, check_ahead=5):
     """
-    Counts how many beam IDs from `Unique_beam_ids` appear consecutively from 
-    the start in `consequtive_beam_ids`.
+    Counts how many beam IDs from `unique_beam_ids` appear consecutively from 
+    the start in `consequtive_beam_ids`, allowing up to `check_ahead` lookahead
+    to tolerate missing or misaligned beams.
 
-    :param consequtive_beam_ids: NumPy array of beam IDs in sorted order.
-    :param unique_beam_ids: NumPy array of unique beam IDs.
+    :param consequtive_beam_ids: NumPy array or list of beam IDs in sorted order.
+    :param unique_beam_ids: NumPy array or list of unique beam IDs.
+    :param check_ahead: Number of beams ahead to check for a match when missing.
     :return: Integer count of consecutive matching elements from the start.
     """
-    count = 0
-    unique_beam_set = set(unique_beam_ids)  # Convert to set for faster lookup
+    unique_beam_set = set(unique_beam_ids)
+    i = 0
+    n = len(consequtive_beam_ids)
 
-    for beam_id in consequtive_beam_ids:
-        if beam_id in unique_beam_set:
-            count += 1
+    while i < n:
+        if consequtive_beam_ids[i] in unique_beam_set:
+            i += 1
+            continue
         else:
-            break  # Stop as soon as we find a non-matching beam
-
-    return count
+            # Check the next `check_ahead` beams
+            found_ahead = False
+            for j in range(1, check_ahead + 1):
+                if i + j < n and consequtive_beam_ids[i + j] in unique_beam_set:
+                    i += j + 1  # Skip to the beam after the matched one
+                    found_ahead = True
+                    break
+            if not found_ahead:
+                break  # No match in the next `check_ahead`, stop counting
+    return i
 
 
 def list_candidates(input_dir, output_dir, file_name, harmonic_opt_flag):
