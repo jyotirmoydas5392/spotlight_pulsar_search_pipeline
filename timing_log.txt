@@ -1,0 +1,966 @@
+Ver 1 Timing 82.6751 for M1084212702_20260202_204330
+Ver 1 AA Timing 10.0832
+Ver 1 Stage 1 Sifting Timing 10.0875
+Ver 1 Stage 2 Sifting Timing 6.7968
+Ver 1 Folding Timing 29.9746
+Ver 1 Classification Timing 2.0140
+Ver 1 Summary Plots Generation Timing 2.6752
+Ver 1 Timing 577.3966 for M1084212702_20260202_212356
+Ver 1 AA Timing 209.5899
+Ver 1 Stage 1 Sifting Timing 99.5207
+Ver 1 Stage 2 Sifting Timing 42.1834
+Ver 1 Folding Timing 142.4143
+Ver 1 Classification Timing 2.0127
+Ver 1 Summary Plots Generation Timing 64.6008
+Ver 1 Timing 782.3415 for M1084212702_20260202_220516
+Ver 1 AA Timing 170.5504
+Ver 1 Stage 1 Sifting Timing 99.6659
+Ver 1 Stage 2 Sifting Timing 42.9473
+Ver 1 Folding Timing 145.5112
+Ver 1 Classification Timing 2.0143
+Ver 1 Summary Plots Generation Timing 78.4845
+Ver 1 Timing 812.3024 for M1084212702_20260202_224554
+Ver 1 AA Timing 195.4573
+Ver 1 Stage 1 Sifting Timing 97.9599
+Ver 1 Stage 2 Sifting Timing 41.7280
+Ver 1 Folding Timing 137.5654
+Ver 1 Classification Timing 2.0124
+Ver 1 Summary Plots Generation Timing 64.5115
+Ver 1 Timing 792.2577 for M1084212702_20260202_232724
+Ver 1 AA Timing 166.4520
+Ver 1 Stage 1 Sifting Timing 104.1019
+Ver 1 Stage 2 Sifting Timing 42.6286
+Ver 1 Folding Timing 140.5373
+Ver 1 Classification Timing 2.0118
+Ver 1 Summary Plots Generation Timing 64.8089
+Ver 1 Timing 794.6393 for M1084212702_20260203_000834
+Ver 1 AA Timing 172.4611
+Ver 1 Stage 1 Sifting Timing 97.9414
+Ver 1 Stage 2 Sifting Timing 41.6153
+Ver 1 Folding Timing 138.9896
+Ver 1 Classification Timing 2.0126
+Ver 1 Summary Plots Generation Timing 65.0263
+Ver 1 Timing 785.5748 for M1084212702_20260203_004933
+Ver 1 AA Timing 169.5551
+Ver 1 Stage 1 Sifting Timing 100.6245
+Ver 1 Stage 2 Sifting Timing 42.5087
+Ver 1 Folding Timing 132.1314
+Ver 1 Classification Timing 2.0136
+Ver 1 Summary Plots Generation Timing 64.7227
+Ver 1 Timing 964.9015 for M1084212702_20260203_013022
+Ver 1 AA Timing 280.2152
+Ver 1 Stage 1 Sifting Timing 130.8545
+Ver 1 Stage 2 Sifting Timing 82.7166
+Ver 1 Folding Timing 161.6429
+Ver 1 Classification Timing 2.0122
+Ver 1 Summary Plots Generation Timing 64.5324
+Ver 1 Timing 814.7166 for M1084212702_20260203_021141
+Ver 1 AA Timing 177.5205
+Ver 1 Stage 1 Sifting Timing 102.9506
+Ver 1 Stage 2 Sifting Timing 42.8397
+Ver 1 Folding Timing 135.6722
+Ver 1 Classification Timing 2.0148
+Ver 1 Summary Plots Generation Timing 64.7195
+Ver 1 Timing 803.0864 for M1084212702_20260203_025251
+Ver 1 AA Timing 178.6510
+Ver 1 Stage 1 Sifting Timing 99.6466
+Ver 1 Stage 2 Sifting Timing 42.4406
+Ver 1 Folding Timing 139.6332
+Ver 1 Classification Timing 2.0137
+Ver 1 Summary Plots Generation Timing 87.2472
+Ver 1 Timing 787.8388 for M1084212702_20260203_033339
+Ver 1 AA Timing 174.9228
+Ver 1 Stage 1 Sifting Timing 101.4100
+Ver 1 Stage 2 Sifting Timing 42.9009
+Ver 1 Folding Timing 130.4431
+Ver 1 Classification Timing 2.0116
+Ver 1 Summary Plots Generation Timing 82.8479
+Ver 1 Timing 763.5776 for M1084212702_20260203_041449
+Ver 1 AA Timing 168.9864
+Ver 1 Stage 1 Sifting Timing 101.4500
+Ver 1 Stage 2 Sifting Timing 42.6350
+Ver 1 Folding Timing 137.7656
+Ver 1 Classification Timing 2.0119
+Ver 1 Summary Plots Generation Timing 82.2851
+Ver 1 Timing 788.9814 for M1084212702_20260203_045527
+Ver 1 AA Timing 172.4406
+Ver 1 Stage 1 Sifting Timing 103.5493
+Ver 1 Stage 2 Sifting Timing 42.2420
+Ver 1 Folding Timing 137.5128
+Ver 1 Classification Timing 2.0147
+Ver 1 Summary Plots Generation Timing 86.4180
+Ver 1 Timing 8034.5698 for J0751+1807_20251025_031307
+Ver 1 AA Timing 253.3569
+Ver 1 Stage 1 Sifting Timing 6885.2712
+Ver 1 Stage 2 Sifting Timing 262.0214
+Ver 1 Folding Timing 242.6958
+Ver 1 Classification Timing 2.0127
+Ver 1 Summary Plots Generation Timing 146.8516
+Ver 1 Timing 8143.1598 for J0900-3144_20251025_035558
+Ver 1 AA Timing 277.2771
+Ver 1 Stage 1 Sifting Timing 6903.5925
+Ver 1 Stage 2 Sifting Timing 263.2307
+Ver 1 Folding Timing 267.8885
+Ver 1 Classification Timing 2.0122
+Ver 1 Summary Plots Generation Timing 147.5543
+Ver 1 Timing 4631.4160 for J1012+5307_20251025_060011
+Ver 1 AA Timing 149.4077
+Ver 1 Stage 1 Sifting Timing 3762.9996
+Ver 1 Stage 2 Sifting Timing 273.9835
+Ver 1 Folding Timing 129.2126
+Ver 1 Classification Timing 2.0128
+Ver 1 Summary Plots Generation Timing 127.4846
+Ver 1 Timing 4564.4936 for J1022+1001_20251025_045858
+Ver 1 AA Timing 139.2994
+Ver 1 Stage 1 Sifting Timing 3789.5252
+Ver 1 Stage 2 Sifting Timing 273.1718
+Ver 1 Folding Timing 118.9031
+Ver 1 Classification Timing 2.0124
+Ver 1 Summary Plots Generation Timing 128.4016
+Ver 1 Timing 5177.3020 for J1125+7819_20251025_062139
+Ver 1 AA Timing 155.3791
+Ver 1 Stage 1 Sifting Timing 4265.0763
+Ver 1 Stage 2 Sifting Timing 282.9193
+Ver 1 Folding Timing 173.8769
+Ver 1 Classification Timing 2.0118
+Ver 1 Summary Plots Generation Timing 132.6002
+Ver 1 Timing 8561.5621 for J1450+5716_20260211_005211
+Ver 1 AA Timing 227.2398
+Ver 1 Stage 1 Sifting Timing 2262.7546
+Ver 1 Stage 2 Sifting Timing 3083.7279
+Ver 1 Folding Timing 2214.9586
+Ver 1 Classification Timing 2.0109
+Ver 1 Summary Plots Generation Timing 725.4671
+Ver 1 Timing 8501.1689 for J1450+5716_20260211_013430
+Ver 1 AA Timing 209.6476
+Ver 1 Stage 1 Sifting Timing 2205.5603
+Ver 1 Stage 2 Sifting Timing 3014.4539
+Ver 1 Folding Timing 2218.3515
+Ver 1 Classification Timing 2.0122
+Ver 1 Summary Plots Generation Timing 646.3429
+Ver 1 Timing 8987.1287 for J1450+5716_20260211_025529
+Ver 1 AA Timing 223.5472
+Ver 1 Stage 1 Sifting Timing 2237.0013
+Ver 1 Stage 2 Sifting Timing 3210.7478
+Ver 1 Folding Timing 2255.6740
+Ver 1 Classification Timing 2.0158
+Ver 1 Summary Plots Generation Timing 845.8658
+Ver 1 Timing 36542.1870 for J1450+5716_20260209_004735
+Ver 1 AA Timing 176.6300
+Ver 1 Stage 1 Sifting Timing 3114.4475
+Ver 1 Stage 2 Sifting Timing 28511.6390
+Ver 1 Folding Timing 3421.0124
+Ver 1 Classification Timing 2.0119
+Ver 1 Summary Plots Generation Timing 1085.3079
+Ver 1 Timing 2735.1328 for J1450+5716_20260209_013257
+Ver 1 AA Timing 692.6473
+Ver 1 Stage 1 Sifting Timing 1665.0135
+Ver 1 Stage 2 Sifting Timing 52.2461
+Ver 1 Folding Timing 182.3019
+Ver 1 Classification Timing 2.0123
+Ver 1 Summary Plots Generation Timing 115.4165
+Ver 1 Timing 2969.6117 for J1450+5716_20260209_021340
+Ver 1 AA Timing 679.1497
+Ver 1 Stage 1 Sifting Timing 1650.9181
+Ver 1 Stage 2 Sifting Timing 23.8895
+Ver 1 Folding Timing 197.0824
+Ver 1 Classification Timing 2.0123
+Ver 1 Summary Plots Generation Timing 125.8391
+Ver 1 Timing 2975.9980 for J1450+5716_20260209_025428
+Ver 1 AA Timing 675.3563
+Ver 1 Stage 1 Sifting Timing 1668.4031
+Ver 1 Stage 2 Sifting Timing 23.9867
+Ver 1 Folding Timing 212.0215
+Ver 1 Classification Timing 2.0163
+Ver 1 Summary Plots Generation Timing 113.8786
+Ver 1 Timing 1738.8208 for 2025SHF_20260216_132326
+Ver 1 AA Timing 605.6625
+Ver 1 Stage 1 Sifting Timing 582.9659
+Ver 1 Stage 2 Sifting Timing 13.4693
+Ver 1 Folding Timing 123.6791
+Ver 1 Classification Timing 2.0164
+Ver 1 Summary Plots Generation Timing 83.0071
+Ver 1 Timing 2050.9923 for 2025SHF_20260216_140728
+Ver 1 AA Timing 800.2006
+Ver 1 Stage 1 Sifting Timing 561.3589
+Ver 1 Stage 2 Sifting Timing 12.6852
+Ver 1 Folding Timing 149.8578
+Ver 1 Classification Timing 2.0142
+Ver 1 Summary Plots Generation Timing 74.3313
+Ver 1 Timing 3011.9406 for 2025SHF_20260216_154034
+Ver 1 AA Timing 748.3698
+Ver 1 Stage 1 Sifting Timing 1635.5767
+Ver 1 Stage 2 Sifting Timing 20.9365
+Ver 1 Folding Timing 234.7817
+Ver 1 Classification Timing 2.0137
+Ver 1 Summary Plots Generation Timing 81.2801
+Ver 1 Timing 2861.3646 for 2025SHF_20260216_162540
+Ver 1 AA Timing 683.2603
+Ver 1 Stage 1 Sifting Timing 1654.0414
+Ver 1 Stage 2 Sifting Timing 23.2020
+Ver 1 Folding Timing 198.7883
+Ver 1 Classification Timing 2.0167
+Ver 1 Summary Plots Generation Timing 47.2812
+Ver 1 Timing 1741.3058 for SN25AICO_20260110_002013
+Ver 1 AA Timing 689.1256
+Ver 1 Stage 1 Sifting Timing 513.8465
+Ver 1 Stage 2 Sifting Timing 12.8387
+Ver 1 Folding Timing 131.7424
+Ver 1 Classification Timing 2.0129
+Ver 1 Summary Plots Generation Timing 48.5121
+Ver 1 Timing 2867.2184 for SN25AICO_20260110_010314
+Ver 1 AA Timing 880.2202
+Ver 1 Stage 1 Sifting Timing 1297.1654
+Ver 1 Stage 2 Sifting Timing 18.0548
+Ver 1 Folding Timing 188.6749
+Ver 1 Classification Timing 2.0121
+Ver 1 Summary Plots Generation Timing 46.1249
+Ver 1 Timing 4171.7672 for IS1_20260213_012205
+Ver 1 AA Timing 835.8204
+Ver 1 Stage 1 Sifting Timing 2600.0396
+Ver 1 Stage 2 Sifting Timing 53.5303
+Ver 1 Folding Timing 266.7879
+Ver 1 Classification Timing 2.0143
+Ver 1 Summary Plots Generation Timing 71.5670
+Ver 1 Timing 4233.5108 for IS1_20260213_020403
+Ver 1 AA Timing 815.6913
+Ver 1 Stage 1 Sifting Timing 2612.3278
+Ver 1 Stage 2 Sifting Timing 60.1563
+Ver 1 Folding Timing 306.2630
+Ver 1 Classification Timing 2.0163
+Ver 1 Summary Plots Generation Timing 68.7641
+Ver 1 Timing 3933.8328 for IS1_20260213_024638
+Ver 1 AA Timing 881.1001
+Ver 1 Stage 1 Sifting Timing 2290.2499
+Ver 1 Stage 2 Sifting Timing 50.3894
+Ver 1 Folding Timing 279.2000
+Ver 1 Classification Timing 2.0117
+Ver 1 Summary Plots Generation Timing 84.8223
+Ver 1 Timing 4172.2277 for IS1_20260213_032909
+Ver 1 AA Timing 808.4088
+Ver 1 Stage 1 Sifting Timing 2605.4069
+Ver 1 Stage 2 Sifting Timing 62.1714
+Ver 1 Folding Timing 266.6430
+Ver 1 Classification Timing 2.0146
+Ver 1 Summary Plots Generation Timing 82.2322
+Ver 1 Timing 4081.5933 for IS1_20260213_041133
+Ver 1 AA Timing 816.6985
+Ver 1 Stage 1 Sifting Timing 2515.9269
+Ver 1 Stage 2 Sifting Timing 58.1051
+Ver 1 Folding Timing 287.9460
+Ver 1 Classification Timing 2.0123
+Ver 1 Summary Plots Generation Timing 91.8915
+Ver 1 Timing 4074.3893 for IS1_20260213_045347
+Ver 1 AA Timing 800.9366
+Ver 1 Stage 1 Sifting Timing 2517.0532
+Ver 1 Stage 2 Sifting Timing 60.4228
+Ver 1 Folding Timing 293.4197
+Ver 1 Classification Timing 2.0119
+Ver 1 Summary Plots Generation Timing 66.7469
+Ver 1 Timing 4177.9911 for IS1_20260213_053748
+Ver 1 AA Timing 857.8766
+Ver 1 Stage 1 Sifting Timing 2762.5750
+Ver 1 Stage 2 Sifting Timing 65.6205
+Ver 1 Folding Timing 386.7196
+Ver 1 Classification Timing 2.0119
+Ver 1 Summary Plots Generation Timing 55.1195
+Ver 1 Timing 510.9889 for IS1_20260213_063251
+Ver 1 AA Timing 98.1188
+Ver 1 Stage 1 Sifting Timing 16.1945
+Ver 1 Stage 2 Sifting Timing 7.4405
+Ver 1 Folding Timing 31.9310
+Ver 1 Classification Timing 2.0145
+Ver 1 Summary Plots Generation Timing 40.6375
+Ver 1 Timing 462.2879 for IS1_20260213_071548
+Ver 1 AA Timing 94.0257
+Ver 1 Stage 1 Sifting Timing 16.1996
+Ver 1 Stage 2 Sifting Timing 7.4670
+Ver 1 Folding Timing 31.9598
+Ver 1 Classification Timing 2.0121
+Ver 1 Summary Plots Generation Timing 40.5118
+Ver 1 Timing 531.7942 for IS1_20260213_075807
+Ver 1 AA Timing 98.5272
+Ver 1 Stage 1 Sifting Timing 16.0772
+Ver 1 Stage 2 Sifting Timing 7.5129
+Ver 1 Folding Timing 27.8897
+Ver 1 Classification Timing 2.0158
+Ver 1 Summary Plots Generation Timing 41.1246
+Ver 1 Timing 253.2413 for GRB251013C_20260206_144842
+Ver 1 AA Timing 93.1564
+Ver 1 Stage 1 Sifting Timing 16.0838
+Ver 1 Stage 2 Sifting Timing 7.4190
+Ver 1 Folding Timing 27.9572
+Ver 1 Classification Timing 2.0141
+Ver 1 Summary Plots Generation Timing 38.8342
+Ver 1 Timing 258.0741 for GRB251013C_20260206_151712
+Ver 1 AA Timing 93.6451
+Ver 1 Stage 1 Sifting Timing 16.0629
+Ver 1 Stage 2 Sifting Timing 7.5254
+Ver 1 Folding Timing 31.9043
+Ver 1 Classification Timing 2.0126
+Ver 1 Summary Plots Generation Timing 39.3705
+Ver 1 Timing 260.6890 for GRB251013C_20260206_154532
+Ver 1 AA Timing 95.7926
+Ver 1 Stage 1 Sifting Timing 16.1074
+Ver 1 Stage 2 Sifting Timing 7.4602
+Ver 1 Folding Timing 31.9565
+Ver 1 Classification Timing 2.0121
+Ver 1 Summary Plots Generation Timing 39.0080
+Ver 1 Timing 194.1611 for ZW049.057_20260107_042510
+Ver 1 AA Timing 94.1696
+Ver 1 Stage 1 Sifting Timing 16.2195
+Ver 1 Stage 2 Sifting Timing 7.6837
+Ver 1 Folding Timing 17.9900
+Ver 1 Classification Timing 2.0124
+Ver 1 Summary Plots Generation Timing 45.2475
+Ver 1 Timing 249.8182 for ZW049.057_20260107_044957
+Ver 1 AA Timing 96.1424
+Ver 1 Stage 1 Sifting Timing 16.2188
+Ver 1 Stage 2 Sifting Timing 7.4567
+Ver 1 Folding Timing 17.9517
+Ver 1 Classification Timing 2.0147
+Ver 1 Summary Plots Generation Timing 40.3578
+Ver 1 Timing 255.1890 for ZW049.057_20260107_051511
+Ver 1 AA Timing 93.7120
+Ver 1 Stage 1 Sifting Timing 18.1096
+Ver 1 Stage 2 Sifting Timing 7.7342
+Ver 1 Folding Timing 15.9737
+Ver 1 Classification Timing 2.0126
+Ver 1 Summary Plots Generation Timing 44.8600
+Ver 1 Timing 244.6606 for ZW049.057_20260107_054020
+Ver 1 AA Timing 93.3026
+Ver 1 Stage 1 Sifting Timing 16.2260
+Ver 1 Stage 2 Sifting Timing 7.5398
+Ver 1 Folding Timing 13.9708
+Ver 1 Classification Timing 2.0110
+Ver 1 Summary Plots Generation Timing 40.9435
+Ver 1 Timing 254.3706 for ZW049.057_20260107_062422
+Ver 1 AA Timing 95.8383
+Ver 1 Stage 1 Sifting Timing 14.2460
+Ver 1 Stage 2 Sifting Timing 7.5810
+Ver 1 Folding Timing 17.9514
+Ver 1 Classification Timing 2.0139
+Ver 1 Summary Plots Generation Timing 40.6580
+Ver 1 Timing 243.9273 for ZW049.057_20260107_065012
+Ver 1 AA Timing 93.5530
+Ver 1 Stage 1 Sifting Timing 16.1419
+Ver 1 Stage 2 Sifting Timing 7.6637
+Ver 1 Folding Timing 14.6509
+Ver 1 Classification Timing 2.0167
+Ver 1 Summary Plots Generation Timing 39.8646
+Ver 1 Timing 270.3679 for ZW049.057_20260107_071543
+Ver 1 AA Timing 94.0599
+Ver 1 Stage 1 Sifting Timing 16.2299
+Ver 1 Stage 2 Sifting Timing 7.7467
+Ver 1 Folding Timing 15.9361
+Ver 1 Classification Timing 2.0120
+Ver 1 Summary Plots Generation Timing 56.6477
+Ver 1 Timing 263.7631 for ZW049.057_20260107_074113
+Ver 1 AA Timing 93.2681
+Ver 1 Stage 1 Sifting Timing 16.1959
+Ver 1 Stage 2 Sifting Timing 7.5040
+Ver 1 Folding Timing 15.9381
+Ver 1 Classification Timing 2.0119
+Ver 1 Summary Plots Generation Timing 56.1205
+Ver 1 Timing 251.2957 for ZW049.057_20260107_080659
+Ver 1 AA Timing 96.0990
+Ver 1 Stage 1 Sifting Timing 18.2335
+Ver 1 Stage 2 Sifting Timing 7.6509
+Ver 1 Folding Timing 14.7569
+Ver 1 Classification Timing 2.0116
+Ver 1 Summary Plots Generation Timing 39.7427
+Ver 1 Timing 227.9122 for ZW049.057_20260107_083428
+Ver 1 AA Timing 93.4110
+Ver 1 Stage 1 Sifting Timing 16.1724
+Ver 1 Stage 2 Sifting Timing 7.4377
+Ver 1 Folding Timing 14.0144
+Ver 1 Classification Timing 2.0166
+Ver 1 Summary Plots Generation Timing 41.9062
+Ver 1 Timing 217.2585 for 3C147OFF_20260214_233951
+Ver 1 AA Timing 95.8009
+Ver 1 Stage 1 Sifting Timing 16.1976
+Ver 1 Stage 2 Sifting Timing 7.1370
+Ver 1 Folding Timing 16.0158
+Ver 1 Classification Timing 2.0127
+Ver 1 Summary Plots Generation Timing 39.7012
+Ver 1 Timing 174.8050 for IS1_20260213_053748
+Ver 1 AA Timing 95.7107
+Ver 1 Stage 1 Sifting Timing 16.1860
+Ver 1 Stage 2 Sifting Timing 7.1078
+Ver 1 Folding Timing 15.9696
+Ver 1 Classification Timing 2.0143
+Ver 1 Summary Plots Generation Timing 4.0201
+Ver 1 Timing 172.7034 for IS1_20260213_063251
+Ver 1 AA Timing 95.9745
+Ver 1 Stage 1 Sifting Timing 16.0569
+Ver 1 Stage 2 Sifting Timing 7.0709
+Ver 1 Folding Timing 15.7581
+Ver 1 Classification Timing 2.0134
+Ver 1 Summary Plots Generation Timing 3.8616
+Ver 1 Timing 169.1311 for IS1_20260213_071548
+Ver 1 AA Timing 93.8362
+Ver 1 Stage 1 Sifting Timing 16.1761
+Ver 1 Stage 2 Sifting Timing 7.1040
+Ver 1 Folding Timing 13.9634
+Ver 1 Classification Timing 2.0166
+Ver 1 Summary Plots Generation Timing 3.9865
+Ver 1 Timing 174.4158 for IS1_20260213_075807
+Ver 1 AA Timing 93.4602
+Ver 1 Stage 1 Sifting Timing 18.1871
+Ver 1 Stage 2 Sifting Timing 7.1358
+Ver 1 Folding Timing 15.9621
+Ver 1 Classification Timing 2.0122
+Ver 1 Summary Plots Generation Timing 3.9640
+Ver 1 Timing 174.6335 for GRB251013C_20260206_144842
+Ver 1 AA Timing 95.6442
+Ver 1 Stage 1 Sifting Timing 16.2689
+Ver 1 Stage 2 Sifting Timing 7.1365
+Ver 1 Folding Timing 17.8627
+Ver 1 Classification Timing 2.0112
+Ver 1 Summary Plots Generation Timing 3.8286
+Ver 1 Timing 172.7422 for GRB251013C_20260206_151712
+Ver 1 AA Timing 93.9975
+Ver 1 Stage 1 Sifting Timing 18.1638
+Ver 1 Stage 2 Sifting Timing 7.1207
+Ver 1 Folding Timing 15.7573
+Ver 1 Classification Timing 2.0117
+Ver 1 Summary Plots Generation Timing 3.8864
+Ver 1 Timing 177.3635 for GRB251013C_20260206_154532
+Ver 1 AA Timing 95.6004
+Ver 1 Stage 1 Sifting Timing 18.2821
+Ver 1 Stage 2 Sifting Timing 7.1379
+Ver 1 Folding Timing 16.7107
+Ver 1 Classification Timing 2.0166
+Ver 1 Summary Plots Generation Timing 3.8915
+Ver 1 Timing 201.7363 for GRB251013C_20260206_125303
+Ver 1 AA Timing 95.9461
+Ver 1 Stage 1 Sifting Timing 16.1735
+Ver 1 Stage 2 Sifting Timing 7.1558
+Ver 1 Folding Timing 15.9750
+Ver 1 Classification Timing 2.0121
+Ver 1 Summary Plots Generation Timing 53.2318
+Ver 1 Timing 286.5370 for GRB251013C_20260206_132041
+Ver 1 AA Timing 97.4386
+Ver 1 Stage 1 Sifting Timing 17.0309
+Ver 1 Stage 2 Sifting Timing 7.4979
+Ver 1 Folding Timing 17.9717
+Ver 1 Classification Timing 2.0116
+Ver 1 Summary Plots Generation Timing 60.0288
+Ver 1 Timing 279.0310 for GRB251013C_20260206_134836
+Ver 1 AA Timing 95.4822
+Ver 1 Stage 1 Sifting Timing 18.2325
+Ver 1 Stage 2 Sifting Timing 7.5644
+Ver 1 Folding Timing 15.8799
+Ver 1 Classification Timing 2.0134
+Ver 1 Summary Plots Generation Timing 58.2966
+Ver 1 Timing 375.0316 for J0437-4715_20260214_200418
+Ver 1 AA Timing 94.6614
+Ver 1 Stage 1 Sifting Timing 16.1493
+Ver 1 Stage 2 Sifting Timing 7.5061
+Ver 1 Folding Timing 15.9572
+Ver 1 Classification Timing 2.0118
+Ver 1 Summary Plots Generation Timing 53.7319
+Ver 1 Timing 485.4838 for J0740+6620_20260214_212633
+Ver 1 AA Timing 93.7783
+Ver 1 Stage 1 Sifting Timing 16.4158
+Ver 1 Stage 2 Sifting Timing 7.6677
+Ver 1 Folding Timing 15.9642
+Ver 1 Classification Timing 2.0118
+Ver 1 Summary Plots Generation Timing 74.3617
+Ver 1 Timing 495.7775 for J0751+1807_20260214_203933
+Ver 1 AA Timing 95.4253
+Ver 1 Stage 1 Sifting Timing 16.2474
+Ver 1 Stage 2 Sifting Timing 7.4409
+Ver 1 Folding Timing 15.9766
+Ver 1 Classification Timing 2.0150
+Ver 1 Summary Plots Generation Timing 54.5079
+Ver 1 Timing 468.5523 for J0900-3144_20260214_221320
+Ver 1 AA Timing 96.2013
+Ver 1 Stage 1 Sifting Timing 16.2141
+Ver 1 Stage 2 Sifting Timing 7.4497
+Ver 1 Folding Timing 17.9438
+Ver 1 Classification Timing 2.0141
+Ver 1 Summary Plots Generation Timing 55.4952
+Ver 1 Timing 423.6882 for J1022+1001_20260214_225645
+Ver 1 AA Timing 96.0567
+Ver 1 Stage 1 Sifting Timing 16.1558
+Ver 1 Stage 2 Sifting Timing 7.3834
+Ver 1 Folding Timing 15.7832
+Ver 1 Classification Timing 2.0120
+Ver 1 Summary Plots Generation Timing 48.7784
+Ver 1 Timing 1901.2070 for 2023_20251213_230238
+Ver 1 AA Timing 875.3115
+Ver 1 Stage 1 Sifting Timing 923.3144
+Ver 1 Stage 2 Sifting Timing 31.9229
+Ver 1 Folding Timing 14.0028
+Ver 1 Classification Timing 2.0113
+Ver 1 Summary Plots Generation Timing 43.4555
+Ver 1 Timing 2417.5387 for 2023_20251213_235619
+Ver 1 AA Timing 704.8690
+Ver 1 Stage 1 Sifting Timing 488.2101
+Ver 1 Stage 2 Sifting Timing 11.1648
+Ver 1 Folding Timing 154.9903
+Ver 1 Classification Timing 2.0152
+Ver 1 Summary Plots Generation Timing 39.2412
+Ver 1 Timing 2217.0006 for GRB251013C_20260227_112640
+Ver 1 AA Timing 594.2319
+Ver 1 Stage 1 Sifting Timing 576.6857
+Ver 1 Stage 2 Sifting Timing 40.7924
+Ver 1 Folding Timing 112.2787
+Ver 1 Classification Timing 2.0125
+Ver 1 Summary Plots Generation Timing 44.9067
+Ver 1 Timing 839.7605 for GRB251013C_20260227_120354
+Ver 1 AA Timing 319.0032
+Ver 1 Stage 1 Sifting Timing 147.7397
+Ver 1 Stage 2 Sifting Timing 12.1470
+Ver 1 Folding Timing 41.6987
+Ver 1 Classification Timing 2.0135
+Ver 1 Summary Plots Generation Timing 40.3450
+Ver 1 Timing 7410.3496 for J1909-3744_20251215_121629
+Ver 1 AA Timing 1202.6062
+Ver 1 Stage 1 Sifting Timing 5534.5810
+Ver 1 Stage 2 Sifting Timing 109.0640
+Ver 1 Folding Timing 449.7912
+Ver 1 Classification Timing 2.0110
+Ver 1 Summary Plots Generation Timing 79.0381
+Ver 1 Timing 2443.5095 for J1939+2134_20251215_145233
+Ver 1 AA Timing 498.8599
+Ver 1 Stage 1 Sifting Timing 1219.0518
+Ver 1 Stage 2 Sifting Timing 27.6967
+Ver 1 Folding Timing 118.2077
+Ver 1 Classification Timing 2.0132
+Ver 1 Summary Plots Generation Timing 68.4319
+Ver 1 Timing 4960.9146 for J1944+0907_20251215_152127
+Ver 1 AA Timing 882.2186
+Ver 1 Stage 1 Sifting Timing 2524.6055
+Ver 1 Stage 2 Sifting Timing 53.5418
+Ver 1 Folding Timing 333.7733
+Ver 1 Classification Timing 2.0114
+Ver 1 Summary Plots Generation Timing 51.9873
+Ver 1 Timing 4903.8419 for J2124-3358_20251215_161353
+Ver 1 AA Timing 905.3078
+Ver 1 Stage 1 Sifting Timing 2552.5233
+Ver 1 Stage 2 Sifting Timing 64.3195
+Ver 1 Folding Timing 306.6280
+Ver 1 Classification Timing 2.0159
+Ver 1 Summary Plots Generation Timing 55.0818
+Ver 1 Timing 4188.3117 for J2145-0750_20251215_193408
+Ver 1 AA Timing 669.3678
+Ver 1 Stage 1 Sifting Timing 2512.3015
+Ver 1 Stage 2 Sifting Timing 60.4649
+Ver 1 Folding Timing 216.2179
+Ver 1 Classification Timing 2.0134
+Ver 1 Summary Plots Generation Timing 53.2805
+Ver 1 Timing 4646.9482 for J2302+4442_20251215_175604
+Ver 1 AA Timing 821.5880
+Ver 1 Stage 1 Sifting Timing 2505.0875
+Ver 1 Stage 2 Sifting Timing 56.5896
+Ver 1 Folding Timing 273.5476
+Ver 1 Classification Timing 2.0112
+Ver 1 Summary Plots Generation Timing 61.4055
+Ver 1 Timing 2225.0325 for J0437-4715_20251229_225328
+Ver 1 AA Timing 433.4682
+Ver 1 Stage 1 Sifting Timing 1187.6200
+Ver 1 Stage 2 Sifting Timing 25.0310
+Ver 1 Folding Timing 102.4199
+Ver 1 Classification Timing 2.0121
+Ver 1 Summary Plots Generation Timing 45.8329
+Ver 1 Timing 2688.7085 for J0613-0200_20251229_222423
+Ver 1 AA Timing 611.1624
+Ver 1 Stage 1 Sifting Timing 1180.2975
+Ver 1 Stage 2 Sifting Timing 29.9834
+Ver 1 Folding Timing 175.6735
+Ver 1 Classification Timing 2.0139
+Ver 1 Summary Plots Generation Timing 45.2390
+Ver 1 Timing 4330.3401 for J0740+6620_20251229_235601
+Ver 1 AA Timing 725.1589
+Ver 1 Stage 1 Sifting Timing 2509.8977
+Ver 1 Stage 2 Sifting Timing 76.2598
+Ver 1 Folding Timing 219.4087
+Ver 1 Classification Timing 2.0120
+Ver 1 Summary Plots Generation Timing 68.6048
+Ver 1 Timing 4609.1662 for J0751+1807_20251229_231716
+Ver 1 AA Timing 789.2528
+Ver 1 Stage 1 Sifting Timing 2552.6365
+Ver 1 Stage 2 Sifting Timing 55.6745
+Ver 1 Folding Timing 259.1200
+Ver 1 Classification Timing 2.0126
+Ver 1 Summary Plots Generation Timing 76.6543
+Ver 1 Timing 4710.5183 for J0900-3144_20251230_003841
+Ver 1 AA Timing 829.8660
+Ver 1 Stage 1 Sifting Timing 2505.5473
+Ver 1 Stage 2 Sifting Timing 61.1403
+Ver 1 Folding Timing 290.1564
+Ver 1 Classification Timing 2.0162
+Ver 1 Summary Plots Generation Timing 58.0508
+Ver 1 Timing 2520.3754 for J1012+5307_20251230_014031
+Ver 1 AA Timing 475.1324
+Ver 1 Stage 1 Sifting Timing 1358.1720
+Ver 1 Stage 2 Sifting Timing 34.0044
+Ver 1 Folding Timing 113.4671
+Ver 1 Classification Timing 2.0124
+Ver 1 Summary Plots Generation Timing 64.6966
+Ver 1 Timing 1645.4140 for J1022+1001_20251230_012044
+Ver 1 AA Timing 340.8773
+Ver 1 Stage 1 Sifting Timing 727.0163
+Ver 1 Stage 2 Sifting Timing 30.8448
+Ver 1 Folding Timing 130.8563
+Ver 1 Classification Timing 2.0120
+Ver 1 Summary Plots Generation Timing 62.5907
+Ver 1 Timing 2799.0673 for J1125+7819_20251230_020154
+Ver 1 AA Timing 483.6067
+Ver 1 Stage 1 Sifting Timing 1454.0449
+Ver 1 Stage 2 Sifting Timing 31.9518
+Ver 1 Folding Timing 179.0332
+Ver 1 Classification Timing 2.0111
+Ver 1 Summary Plots Generation Timing 78.5583
+Ver 1 Timing 469.5817 for 3C147OFF_20251204_050729
+Ver 1 AA Timing 253.5767
+Ver 1 Stage 1 Sifting Timing 67.1536
+Ver 1 Stage 2 Sifting Timing 13.2201
+Ver 1 Folding Timing 20.5786
+Ver 1 Classification Timing 2.0161
+Ver 1 Summary Plots Generation Timing 60.3248
+Ver 1 Timing 482.5571 for 3C48OFF_20251204_001317
+Ver 1 AA Timing 255.6456
+Ver 1 Stage 1 Sifting Timing 71.7801
+Ver 1 Stage 2 Sifting Timing 14.8828
+Ver 1 Folding Timing 22.5008
+Ver 1 Classification Timing 2.0112
+Ver 1 Summary Plots Generation Timing 62.2874
+Ver 1 Timing 479.6115 for J0437-4715_20251204_010813
+Ver 1 AA Timing 254.1142
+Ver 1 Stage 1 Sifting Timing 69.0967
+Ver 1 Stage 2 Sifting Timing 15.0598
+Ver 1 Folding Timing 19.8711
+Ver 1 Classification Timing 2.0120
+Ver 1 Summary Plots Generation Timing 64.2052
+Ver 1 Timing 469.1295 for J0613-0200_20251204_040611
+Ver 1 AA Timing 253.6068
+Ver 1 Stage 1 Sifting Timing 63.8898
+Ver 1 Stage 2 Sifting Timing 12.9516
+Ver 1 Folding Timing 22.8093
+Ver 1 Classification Timing 2.0134
+Ver 1 Summary Plots Generation Timing 60.3748
+Ver 1 Timing 469.7584 for J0740+6620_20251204_013134
+Ver 1 AA Timing 251.5193
+Ver 1 Stage 1 Sifting Timing 58.4889
+Ver 1 Stage 2 Sifting Timing 13.3581
+Ver 1 Folding Timing 20.1109
+Ver 1 Classification Timing 2.0159
+Ver 1 Summary Plots Generation Timing 71.2759
+Ver 1 Timing 479.4730 for J0751+1807_20251204_002334
+Ver 1 AA Timing 253.7520
+Ver 1 Stage 1 Sifting Timing 72.8156
+Ver 1 Stage 2 Sifting Timing 13.7633
+Ver 1 Folding Timing 20.1692
+Ver 1 Classification Timing 2.0131
+Ver 1 Summary Plots Generation Timing 61.4018
+Ver 1 Timing 473.4473 for J0900-3144_20251204_020810
+Ver 1 AA Timing 249.7323
+Ver 1 Stage 1 Sifting Timing 65.2968
+Ver 1 Stage 2 Sifting Timing 14.4624
+Ver 1 Folding Timing 21.2979
+Ver 1 Classification Timing 2.0154
+Ver 1 Summary Plots Generation Timing 68.8712
+Ver 1 Timing 473.9891 for J1012+5307_20251204_031413
+Ver 1 AA Timing 255.6554
+Ver 1 Stage 1 Sifting Timing 64.6130
+Ver 1 Stage 2 Sifting Timing 12.8435
+Ver 1 Folding Timing 22.0525
+Ver 1 Classification Timing 2.0117
+Ver 1 Summary Plots Generation Timing 61.9588
+Ver 1 Timing 456.3151 for J1022+1001_20251204_043730
+Ver 1 AA Timing 247.1382
+Ver 1 Stage 1 Sifting Timing 61.7172
+Ver 1 Stage 2 Sifting Timing 13.5897
+Ver 1 Folding Timing 17.3678
+Ver 1 Classification Timing 2.0161
+Ver 1 Summary Plots Generation Timing 61.2345
+Ver 1 Timing 469.1409 for J1125+7819_20251204_033618
+Ver 1 AA Timing 253.9805
+Ver 1 Stage 1 Sifting Timing 64.6664
+Ver 1 Stage 2 Sifting Timing 13.2097
+Ver 1 Folding Timing 22.2673
+Ver 1 Classification Timing 2.0121
+Ver 1 Summary Plots Generation Timing 60.5306
+Ver 1 Timing 469.9544 for 3C48OFF_20260226_182527
+Ver 1 AA Timing 251.6883
+Ver 1 Stage 1 Sifting Timing 66.0735
+Ver 1 Stage 2 Sifting Timing 14.4414
+Ver 1 Folding Timing 21.0646
+Ver 1 Classification Timing 2.0130
+Ver 1 Summary Plots Generation Timing 62.4106
+Ver 1 Timing 1458.1092 for J0437-4715_20260226_191005
+Ver 1 AA Timing 350.5394
+Ver 1 Stage 1 Sifting Timing 582.3548
+Ver 1 Stage 2 Sifting Timing 20.3556
+Ver 1 Folding Timing 94.7399
+Ver 1 Classification Timing 2.0138
+Ver 1 Summary Plots Generation Timing 64.0162
+Ver 1 Timing 2716.1790 for J0613-0200_20260226_183737
+Ver 1 AA Timing 574.2801
+Ver 1 Stage 1 Sifting Timing 1204.5081
+Ver 1 Stage 2 Sifting Timing 26.3751
+Ver 1 Folding Timing 165.5330
+Ver 1 Classification Timing 2.0115
+Ver 1 Summary Plots Generation Timing 64.0897
+Ver 1 Timing 4477.0989 for J0751+1807_20260226_193348
+Ver 1 AA Timing 768.9195
+Ver 1 Stage 1 Sifting Timing 2519.2214
+Ver 1 Stage 2 Sifting Timing 55.1880
+Ver 1 Folding Timing 257.3066
+Ver 1 Classification Timing 2.0133
+Ver 1 Summary Plots Generation Timing 51.5011
+Ver 1 Timing 464.0543 for 3C147OFF_20251115_060022
+Ver 1 AA Timing 253.8723
+Ver 1 Stage 1 Sifting Timing 69.2345
+Ver 1 Stage 2 Sifting Timing 13.4898
+Ver 1 Folding Timing 19.3347
+Ver 1 Classification Timing 2.0156
+Ver 1 Summary Plots Generation Timing 39.0712
+Ver 1 Timing 2174.3463 for J0437-4715_20251115_022141
+Ver 1 AA Timing 452.3552
+Ver 1 Stage 1 Sifting Timing 1188.2038
+Ver 1 Stage 2 Sifting Timing 24.9998
+Ver 1 Folding Timing 100.1400
+Ver 1 Classification Timing 2.0115
+Ver 1 Summary Plots Generation Timing 50.0937
+Ver 1 Timing 2640.6796 for J0613-0200_20251115_015159
+Ver 1 AA Timing 596.8291
+Ver 1 Stage 1 Sifting Timing 1182.4206
+Ver 1 Stage 2 Sifting Timing 26.7126
+Ver 1 Folding Timing 174.6575
+Ver 1 Classification Timing 2.0123
+Ver 1 Summary Plots Generation Timing 43.6865
+Ver 1 Timing 3767.7773 for J0740+6620_20251115_032805
+Ver 1 AA Timing 884.6137
+Ver 1 Stage 1 Sifting Timing 2506.7693
+Ver 1 Stage 2 Sifting Timing 58.6775
+Ver 1 Folding Timing 213.5786
+Ver 1 Classification Timing 2.0115
+Ver 1 Summary Plots Generation Timing 55.8255
+Ver 1 Timing 4600.3962 for J0751+1807_20251115_024805
+Ver 1 AA Timing 790.8637
+Ver 1 Stage 1 Sifting Timing 2536.3196
+Ver 1 Stage 2 Sifting Timing 58.6097
+Ver 1 Folding Timing 240.7720
+Ver 1 Classification Timing 2.0118
+Ver 1 Summary Plots Generation Timing 74.4201
+Ver 1 Timing 4847.9894 for J0900-3144_20251115_040524
+Ver 1 AA Timing 838.7928
+Ver 1 Stage 1 Sifting Timing 2668.5755
+Ver 1 Stage 2 Sifting Timing 68.7988
+Ver 1 Folding Timing 285.6594
+Ver 1 Classification Timing 2.0117
+Ver 1 Summary Plots Generation Timing 55.3278
+Ver 1 Timing 2765.2992 for J1012+5307_20251115_050917
+Ver 1 AA Timing 497.2626
+Ver 1 Stage 1 Sifting Timing 1593.6568
+Ver 1 Stage 2 Sifting Timing 38.8106
+Ver 1 Folding Timing 125.0566
+Ver 1 Classification Timing 2.0134
+Ver 1 Summary Plots Generation Timing 43.6818
+Ver 1 Timing 1131.0212 for J1022+1001_20251115_044831
+Ver 1 AA Timing 341.8268
+Ver 1 Stage 1 Sifting Timing 600.6499
+Ver 1 Stage 2 Sifting Timing 23.7121
+Ver 1 Folding Timing 84.1383
+Ver 1 Classification Timing 2.0135
+Ver 1 Summary Plots Generation Timing 41.1136
+Ver 1 Timing 2562.4961 for J1125+7819_20251115_053112
+Ver 1 AA Timing 491.3533
+Ver 1 Stage 1 Sifting Timing 1263.9103
+Ver 1 Stage 2 Sifting Timing 35.1811
+Ver 1 Folding Timing 167.3758
+Ver 1 Classification Timing 2.0116
+Ver 1 Summary Plots Generation Timing 45.1297
+Ver 1 Timing 446.3000 for 3C286OFF_20260103_082424
+Ver 1 AA Timing 255.9011
+Ver 1 Stage 1 Sifting Timing 57.3887
+Ver 1 Stage 2 Sifting Timing 13.3003
+Ver 1 Folding Timing 20.2733
+Ver 1 Classification Timing 2.0155
+Ver 1 Summary Plots Generation Timing 40.5627
+Ver 1 Timing 479.8415 for 3C48OFF_20260103_185628
+Ver 1 AA Timing 255.9286
+Ver 1 Stage 1 Sifting Timing 66.4961
+Ver 1 Stage 2 Sifting Timing 14.2821
+Ver 1 Folding Timing 18.3294
+Ver 1 Classification Timing 2.0111
+Ver 1 Summary Plots Generation Timing 69.7579
+Ver 1 Timing 4663.0445 for J0030+0451_20260103_155511
+Ver 1 AA Timing 818.5456
+Ver 1 Stage 1 Sifting Timing 2489.8748
+Ver 1 Stage 2 Sifting Timing 70.4233
+Ver 1 Folding Timing 287.9718
+Ver 1 Classification Timing 2.0118
+Ver 1 Summary Plots Generation Timing 69.9969
+Ver 1 Timing 4897.5167 for J0034-0534_20260103_151412
+Ver 1 AA Timing 823.1640
+Ver 1 Stage 1 Sifting Timing 2626.2447
+Ver 1 Stage 2 Sifting Timing 58.8289
+Ver 1 Folding Timing 275.1671
+Ver 1 Classification Timing 2.0112
+Ver 1 Summary Plots Generation Timing 81.0426
+Ver 1 Timing 4998.1650 for J1600-3053_20260103_083655
+Ver 1 AA Timing 914.4137
+Ver 1 Stage 1 Sifting Timing 2520.8595
+Ver 1 Stage 2 Sifting Timing 60.7723
+Ver 1 Folding Timing 325.7818
+Ver 1 Classification Timing 2.0114
+Ver 1 Summary Plots Generation Timing 76.7353
+Ver 1 Timing 4987.5790 for J1643-1224_20260103_114339
+Ver 1 AA Timing 843.3652
+Ver 1 Stage 1 Sifting Timing 2730.6905
+Ver 1 Stage 2 Sifting Timing 72.9464
+Ver 1 Folding Timing 293.0293
+Ver 1 Classification Timing 2.0114
+Ver 1 Summary Plots Generation Timing 63.0127
+Ver 1 Timing 5267.0457 for J1713+0747_20260103_132722
+Ver 1 AA Timing 907.2354
+Ver 1 Stage 1 Sifting Timing 2846.3766
+Ver 1 Stage 2 Sifting Timing 69.0487
+Ver 1 Folding Timing 333.8372
+Ver 1 Classification Timing 2.0113
+Ver 1 Summary Plots Generation Timing 64.3291
+Ver 1 Timing 4695.9855 for J1730-2304_20260103_101625
+Ver 1 AA Timing 829.0984
+Ver 1 Stage 1 Sifting Timing 2533.5797
+Ver 1 Stage 2 Sifting Timing 54.8711
+Ver 1 Folding Timing 289.9269
+Ver 1 Classification Timing 2.0115
+Ver 1 Summary Plots Generation Timing 51.8882
+Ver 1 Timing 4247.1787 for J1744-1134_20260103_125542
+Ver 1 AA Timing 689.4592
+Ver 1 Stage 1 Sifting Timing 2513.9667
+Ver 1 Stage 2 Sifting Timing 64.8548
+Ver 1 Folding Timing 205.8361
+Ver 1 Classification Timing 2.0115
+Ver 1 Summary Plots Generation Timing 51.6207
+Ver 1 Timing 5230.6497 for J1857+0943_20260103_092410
+Ver 1 AA Timing 1007.7339
+Ver 1 Stage 1 Sifting Timing 2589.5546
+Ver 1 Stage 2 Sifting Timing 61.9912
+Ver 1 Folding Timing 353.9037
+Ver 1 Classification Timing 2.0120
+Ver 1 Summary Plots Generation Timing 51.5932
+Ver 1 Timing 4969.5829 for J1909-3744_20260103_105751
+Ver 1 AA Timing 907.3939
+Ver 1 Stage 1 Sifting Timing 2589.9350
+Ver 1 Stage 2 Sifting Timing 65.9103
+Ver 1 Folding Timing 312.6689
+Ver 1 Classification Timing 2.0133
+Ver 1 Summary Plots Generation Timing 51.9554
+Ver 1 Timing 2426.8791 for J1939+2134_20260103_123006
+Ver 1 AA Timing 481.2736
+Ver 1 Stage 1 Sifting Timing 1256.0063
+Ver 1 Stage 2 Sifting Timing 30.5646
+Ver 1 Folding Timing 140.7343
+Ver 1 Classification Timing 2.0114
+Ver 1 Summary Plots Generation Timing 44.6996
+Ver 1 Timing 5042.5430 for J1944+0907_20260103_142052
+Ver 1 AA Timing 926.9666
+Ver 1 Stage 1 Sifting Timing 2566.8175
+Ver 1 Stage 2 Sifting Timing 61.6982
+Ver 1 Folding Timing 341.4185
+Ver 1 Classification Timing 2.0113
+Ver 1 Summary Plots Generation Timing 53.0931
+Ver 1 Timing 5071.4335 for J2124-3358_20260103_163818
+Ver 1 AA Timing 913.2592
+Ver 1 Stage 1 Sifting Timing 2578.3322
+Ver 1 Stage 2 Sifting Timing 56.6118
+Ver 1 Folding Timing 323.1445
+Ver 1 Classification Timing 2.0123
+Ver 1 Summary Plots Generation Timing 63.3037
+Ver 1 Timing 4362.2471 for J2145-0750_20260103_172440
+Ver 1 AA Timing 692.6630
+Ver 1 Stage 1 Sifting Timing 2638.7661
+Ver 1 Stage 2 Sifting Timing 66.8495
+Ver 1 Folding Timing 196.0108
+Ver 1 Classification Timing 2.0113
+Ver 1 Summary Plots Generation Timing 52.6498
+Ver 1 Timing 5222.8043 for J2302+4442_20260103_180252
+Ver 1 AA Timing 978.9367
+Ver 1 Stage 1 Sifting Timing 2515.8448
+Ver 1 Stage 2 Sifting Timing 55.7380
+Ver 1 Folding Timing 367.2031
+Ver 1 Classification Timing 2.0147
+Ver 1 Summary Plots Generation Timing 60.5244
+Ver 1 Timing 621.9461 for J0134-1932_20251226_212039
+Ver 1 AA Timing 280.1828
+Ver 1 Stage 1 Sifting Timing 85.5786
+Ver 1 Stage 2 Sifting Timing 12.2012
+Ver 1 Folding Timing 22.9867
+Ver 1 Classification Timing 2.0123
+Ver 1 Summary Plots Generation Timing 38.7924
+Ver 1 Timing 2153.3262 for J0142-3023_20251226_221409
+Ver 1 AA Timing 584.0222
+Ver 1 Stage 1 Sifting Timing 615.3365
+Ver 1 Stage 2 Sifting Timing 16.2794
+Ver 1 Folding Timing 109.6800
+Ver 1 Classification Timing 2.0117
+Ver 1 Summary Plots Generation Timing 40.9801
+Ver 1 Timing 708.3816 for J0339-0133_20251226_232309
+Ver 1 AA Timing 244.3487
+Ver 1 Stage 1 Sifting Timing 156.4779
+Ver 1 Stage 2 Sifting Timing 14.3918
+Ver 1 Folding Timing 36.0071
+Ver 1 Classification Timing 2.0116
+Ver 1 Summary Plots Generation Timing 41.0430
+Ver 1 Timing 1183.3209 for J2003-3251_20251226_163138
+Ver 1 AA Timing 339.5349
+Ver 1 Stage 1 Sifting Timing 316.1618
+Ver 1 Stage 2 Sifting Timing 15.2589
+Ver 1 Folding Timing 68.4001
+Ver 1 Classification Timing 2.0102
+Ver 1 Summary Plots Generation Timing 44.8104
+Ver 1 Timing 1161.7783 for J2142-4420_20251226_172859
+Ver 1 AA Timing 346.3370
+Ver 1 Stage 1 Sifting Timing 308.8230
+Ver 1 Stage 2 Sifting Timing 14.5454
+Ver 1 Folding Timing 55.7507
+Ver 1 Classification Timing 2.0140
+Ver 1 Summary Plots Generation Timing 38.8166
+Ver 1 Timing 1122.9098 for J2207-4036_20251226_182840
+Ver 1 AA Timing 333.6589
+Ver 1 Stage 1 Sifting Timing 312.0280
+Ver 1 Stage 2 Sifting Timing 14.9326
+Ver 1 Folding Timing 57.5946
+Ver 1 Classification Timing 2.0162
+Ver 1 Summary Plots Generation Timing 38.8676
+Ver 1 Timing 929.2802 for J2349-3712_20251226_192722
+Ver 1 AA Timing 336.8735
+Ver 1 Stage 1 Sifting Timing 153.5030
+Ver 1 Stage 2 Sifting Timing 14.0266
+Ver 1 Folding Timing 50.8412
+Ver 1 Classification Timing 2.0123
+Ver 1 Summary Plots Generation Timing 38.6473
+Ver 1 Timing 73.3153 for J0129-0807_20251124_233102
+Ver 1 AA Timing 10.0524
+Ver 1 Stage 1 Sifting Timing 10.0509
+Ver 1 Stage 2 Sifting Timing 6.5862
+Ver 1 Folding Timing 15.9490
+Ver 1 Classification Timing 2.0118
+Ver 1 Summary Plots Generation Timing 2.9141
+Ver 1 Timing 75.3202 for J0741+312_20251125_003434
+Ver 1 AA Timing 10.0498
+Ver 1 Stage 1 Sifting Timing 10.0485
+Ver 1 Stage 2 Sifting Timing 6.5028
+Ver 1 Folding Timing 19.9800
+Ver 1 Classification Timing 2.0113
+Ver 1 Summary Plots Generation Timing 2.4948
+Ver 1 Timing 72.3690 for J0741+312_20251125_005405
+Ver 1 AA Timing 10.0491
+Ver 1 Stage 1 Sifting Timing 10.0548
+Ver 1 Stage 2 Sifting Timing 7.2893
+Ver 1 Folding Timing 15.9302
+Ver 1 Classification Timing 2.0158
+Ver 1 Summary Plots Generation Timing 2.4923
+Ver 1 Timing 71.8934 for J0804+3012_20251125_004248
+Ver 1 AA Timing 10.0548
+Ver 1 Stage 1 Sifting Timing 10.0605
+Ver 1 Stage 2 Sifting Timing 6.6413
+Ver 1 Folding Timing 15.9448
+Ver 1 Classification Timing 2.0121
+Ver 1 Summary Plots Generation Timing 2.5042

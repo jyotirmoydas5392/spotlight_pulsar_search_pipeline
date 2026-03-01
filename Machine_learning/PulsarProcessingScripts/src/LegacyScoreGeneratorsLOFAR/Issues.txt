@@ -1,0 +1,47 @@
+ISSUES FOUND WITH THIS CODE:
+
+1. Imports too many external libraries e.g. presto, plotting libraries etc. These will be read
+   by python interpreter before the script is executed. The more imports to process, the longer
+   this will take.
+2. Multiple errors being reports with respct to the following:
+
+	2. a)
+	SOURCE: /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/scipy/optimize/minpack.py:393: 
+	ERROR : RuntimeWarning: Number of calls to function has reached maxfev = 1000.
+	EFFECT: The least squares optimization call isn't finding the optimal parameters (local minimum since using Levenberg Marquardt).
+			This means incorrect parameters will be returned after 1000 calls to perform the least squares optimization.
+    
+    2. b)
+    SOURCE: operations_new.py:199: 
+    ERROR : RuntimeWarning: divide by zero encountered in divide IN err = y - (abs(maximum)*exp((-((x-expect)/sigma)**2)/2)+(bg))
+    EFFECT: should be minimal, but indicates incorrect parameters being supplied to scipy's leastsq function.
+    
+    2. c) 
+    SOURCE: N/A
+    ERROR : NaN values being returned as scores.
+    EFFECT: Our machine learning classifiers cannot deal with NaN values.
+    
+    2. c) 
+    SOURCE: N/A
+    ERROR : NaN values being returned as scores.
+    EFFECT: Our machine learning classifiers cannot deal with NaN values.
+    
+    2. d)
+    SOURCE: test_22.py
+    ERROR : ValueError: operands could not be broadcast together with shapes (50) (9). Happening where,
+            t1t2_diff = t2_result[3] - (t1_result[3] + minbg - p.std()) - differences of gaussian fits t1 and t2. The arrays
+            being used are of different sizes. 
+    EFFECT: The code will fail on certain candidates producing no scores.
+    
+3.	Code problems:
+
+	3. a) Chi-squared computed incorrectly in:
+	
+		def fit_sine(ydata,nmax,width):
+		fit_sine_sqr(ydata,nmax,width):
+		
+		Note that a width parameter was passed to both these functions, which actually
+		held the pulse width. But this parameter was never used.
+		
+4. I've given up keeping track, there are too many!
+    

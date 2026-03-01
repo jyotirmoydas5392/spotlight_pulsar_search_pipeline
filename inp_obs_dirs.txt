@@ -1,0 +1,156 @@
+#/lustre_data/spotlight/data/48_026_20250912_002807 (Marked)
+#/lustre_data/spotlight/data/48_051_20250912_091643 (Marked)
+#/lustre_data/spotlight/data/48_161_20250913_071313 (Marked)
+#/lustre_data/spotlight/data/48_112_20250913_171942 (Marked)
+#/lustre_data/spotlight/data/48_082_20250914_141414 (Marked)
+#/lustre_data/spotlight/data/48_052_20250915_001832 (Marked)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_056_20250716_082409 (No dir) (Marked)
+#/lustre_data/spotlight/data/48_038_20250716_222642 (Marked)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_167_20250717_021837 (No dir) (Marked)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_026_20250718_214658 (No dir) (Marked)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_060_20250719_093411 (No dir) (Marked)
+#/lustre_data/spotlight/data/48_083_20250720_141027 (Marked)
+#/lustre_data/spotlight/data/48_042_20250721_070328 (Marked)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_042_20250721_125553 (No dir) (Marked)
+#/lustre_data/spotlight/data/48_060_20250722_101811 (Marked)
+#/lustre_data/spotlight/data/48_161_20250722_113415 (Directory not present)
+#/lustre_data/spotlight/data/48_161_20250722_145446 (Marked)
+#/lustre_data/spotlight/data/48_051_20250724_193640 (Directory not present)
+#/lustre_data/spotlight/data/48_017A_20250725_122717 (Marked)
+#/lustre_data/spotlight/data/48_091_20250727_085114 (No RAW Data and FilData is empty)
+#/lustre_data/spotlight/data/48_071_20250728_031849 (Marked)
+#/lustre_data/spotlight/data/48_071_20250728_051321 (BeamData, FilData empty)
+#/lustre_data/spotlight/data/48_138_20250728_183449 (Marked)
+#/lustre_data/spotlight/data/48_098_20250728_203616 (No RAW Data and FilData is empty)
+#/lustre_data/spotlight/data/48_167_20250730_224003 (No RAW Data and FilData is empty)
+#/lustre_data/spotlight/data/48_103_20250731_212423  # ERROR # .ahdr file not found
+#/lustre_data/spotlight/data/48_056_20250801_034842  # ERROR # .ahdr file not found
+#/lustre_data/spotlight/data/48_026_20250801_073337  # ERROR # Observation directory does not exist
+#/lustre_data/spotlight/data/48_115_20250801_181750  # ERROR # Observation directory does not exist
+#/lustre_data/spotlight/data/48_056_20250802_180207  # ERROR # Observation directory does not exist
+#/lustre_data/spotlight/data/48_024_20250803_172118  # ERROR # .ahdr file not found
+#/lustre_data/spotlight/data/48_038_20250803_221646  # ERROR # .ahdr file not found
+#/lustre_data/spotlight/data/48_062_20250804_061445  # ERROR # .ahdr file not found
+#/lustre_data/spotlight/data/48_139_20250804_081535
+#/lustre_data/spotlight/data/48_093_20250804_125925
+#/lustre_data/spotlight/data/48_088_20250804_221542
+#/lustre_data/spotlight/data/48_069_20250805_082322
+#/lustre_data/spotlight/data/48_051_20250808_001325  (Positive not analysed)
+#/lustre_data/spotlight/data/48_089_20250808_020727  (Not Analysed)
+#/lustre_data/spotlight/data/48_141_20250808_054324  # ERROR # .ahdr file not found
+#/lustre_data/spotlight/data/48_083_20250808_121054  (Not Analysed)
+#/lustre_data/spotlight/data/48_042_20250811_170532  (Not Analysed)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_042_20250811_181910  
+#(Directory not present)
+#/lustre_data/spotlight/data/48_093_20250812_140642  # ERROR # .ahdr file not found
+#/lustre_scratch/spotlight/data/data_from_lustre_data/DDTC441_20250812_231348 
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/DDTC434_20250813_031921 
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/DDTC441_20250813_221918 
+#(Directory not present)
+#/lustre_data/spotlight/data/48_056_20250815_063644  # ERROR # .ahdr file not found
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_094_20250815_161705  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_058_20250818_022002  
+#(Directory not present) 
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_038_20250818_173219  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_112_20250818_191846  
+#(Directory not present)
+#/lustre_data/spotlight/data/48_038_20250822_221748  (Not Analysed)
+#/lustre_data/spotlight/data/48_094_20250823_053921  (Not Analysed)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_157_20250823_111030  
+#(Directory not present)
+#/lustre_data/spotlight/data/48_024_20250823_191645
+#/lustre_scratch/spotlight/data/data_from_lustre_data/DDTC446_20250824_172555 
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/DDTC446_20250824_191111 
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_051_20250825_072913  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_157_20250825_100956  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_157_20250825_112042  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_145_20250826_094740  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_145_20250826_152418  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_090_20250826_191212  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_167_20250826_233007  
+#(Directory not present)
+#/lustre_data/spotlight/data/48_161_20250902_141257  # ERROR # .ahdr file not found
+#/lustre_data/spotlight/data/48_089_20250904_200626  (Not analysed)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_161_20250905_080750  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_141_20250907_213519  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_161_20250909_064143  
+#(Directory not present)
+#/lustre_scratch/spotlight/data/data_from_lustre_data/48_161_20250909_113909  
+#(Directory not present)
+#/lustre_data/spotlight/data/48_026_20250912_002807  (Not analysed)
+#/lustre_data/spotlight/data/48_051_20250912_091643  (Not analysed)
+#/lustre_data/spotlight/data/48_161_20250913_071313  (Not analysed)
+#/lustre_data/spotlight/data/48_112_20250913_171942  (Not analysed)
+#/lustre_data/spotlight/data/48_082_20250914_141414  (Not analysed)
+#/lustre_data/spotlight/data/48_052_20250915_001832  (Not analysed)
+#/lustre_data/spotlight/data/48_037_20250928_170941
+#/lustre_data/spotlight/data/48_083_20250928_123641
+##/lustre_data/spotlight/data/48_071_20250927_223634
+#/lustre_data/spotlight/data/48_026A_20250926_141540
+#/lustre_data/spotlight/data/242_20250926_103246
+#/lustre_data/spotlight/data/242_20250926_071515
+#/lustre_data/spotlight/data/48_051_20250926_041221
+#/lustre_data/spotlight/data/DDTC434_20250926_005703
+#/lustre_data/spotlight/data/DDTC434_20250925_011244
+#/lustre_data/spotlight/data/48_130_20250924_021433
+#/lustre_data/spotlight/data/48_145_20250923_103000
+#/lustre_data/spotlight/data/48_145_20250923_082433
+#/lustre_data/spotlight/data/DDTC434_20250923_012623
+#/lustre_data/spotlight/data/DDTC445_20250923_001647
+#/lustre_data/spotlight/data/DDTC450_20250922_181948
+#/lustre_data/spotlight/data/48_094_20250922_171401
+#/lustre_data/spotlight/data/48_145_20250922_084728
+#/lustre_data/spotlight/data/DDTC450_20250921_182540
+#/lustre_data/spotlight/data/DDTC445_20250921_021131
+#/lustre_data/spotlight/data/48_094_20250920_201939
+#/lustre_data/spotlight/data/48_112_20250920_152429
+#/lustre_data/spotlight/data/48_026_20250919_145045
+#/lustre_data/spotlight/data/48_094_20250918_204011
+#/lustre_data/spotlight/data/48_145_20250916_191326
+#/lustre_data/spotlight/data/48_145_20250916_150313
+#/lustre_data/spotlight/data/48_145_20250916_114017
+#/lustre_data/spotlight/data/48_064_20250916_045544
+#/lustre_data/spotlight/data/48_145_20250916_114017 (Incomplete Filterbank)
+#/lustre_data/spotlight/data/48_145_20250916_150313 (Incomplete Filterbank)
+#/lustre_data/spotlight/data/48_145_20250916_191326
+#/lustre_data/spotlight/data/48_094_20250918_204011
+#/lustre_data/spotlight/data/48_026_20250919_145045
+#/lustre_data/spotlight/data/48_112_20250920_152429
+#/lustre_data/spotlight/data/48_094_20250920_201939
+#/lustre_data/spotlight/data/DDTC445_20250921_021131
+#/lustre_data/spotlight/data/DDTC450_20250921_182540
+#/lustre_data/spotlight/data/48_145_20250922_084728
+#/lustre_data/spotlight/data/48_094_20250922_171401
+#/lustre_data/spotlight/data/DDTC450_20250922_181948
+#/lustre_data/spotlight/data/DDTC445_20250923_001647
+#/lustre_data/spotlight/data/DDTC434_20250923_012623
+#/lustre_data/spotlight/data/48_145_20250923_082433
+#/lustre_data/spotlight/data/48_145_20250923_103000
+#/lustre_data/spotlight/data/48_130_20250924_021433
+#/lustre_data/spotlight/data/DDTC434_20250925_011244
+#/lustre_data/spotlight/data/DDTC434_20250926_005703
+#/lustre_data/spotlight/data/48_051_20250926_041221
+#/lustre_data/spotlight/data/242_20250926_071515 (Incomplete Filterbank)
+#/lustre_data/spotlight/data/242_20250926_103246
+#/lustre_data/spotlight/data/48_026A_20250926_141540 (Not available)
+#/lustre_data/spotlight/data/48_071_20250927_223634
+#/lustre_data/spotlight/data/48_083_20250928_123641
+#/lustre_data/spotlight/data/48_037_20250928_170941
+/lustre_data/spotlight/data/48_051_20250830_181503
+/lustre_data/spotlight/data/47_022_20250807_181624
+/lustre_data/spotlight/data/48_038_20250818_173219
+

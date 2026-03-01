@@ -1,0 +1,7 @@
+awk -F , '{print $1 }' prediction_6may_LOFARmodel.txt >cand_file
+
+For candidate classification with HTRU list
+java -jar /home/bhaswati/HTRU_CLASSIFIER_STUFF/ML.jar -v -m/home/bhaswati/HTRU_CLASSIFIER_STUFF/HTRU_DT.model -o/home/bhaswati/GHRSS_cands_6may/prediction_6may.txt -p/home/bhaswati/GHRSS_cands_6may/scores.arff -a1
+
+For candidate classification with LOFAR list
+java -jar /home/bhaswati/HTRU_CLASSIFIER_STUFF/ML.jar -v -m/home/bhaswati/GHRSS_cands_6may/DT_LOTAAS.model -o/home/bhaswati/GHRSS_cands_6may/prediction_6may.txt -p/home/bhaswati/GHRSS_cands_6may/scores.arff -a1
