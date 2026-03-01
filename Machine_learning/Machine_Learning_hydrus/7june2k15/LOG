@@ -1,0 +1,25 @@
+python /home/bhaswati/PulsarProcessingScripts/src/CandidateScoreGenerators/ScoreGenerator.py -c /home/bhaswati/Machine_Learning/7june2k15/pfd -o /home/bhaswati/Machine_Learning/7june2k15/scores.arff --pfd --arff --dmprof
+
+***********************************
+	Command line arguments:
+	Debug: False
+	Write to single file: True
+	Output path: /home/bhaswati/Machine_Learning/7june2k15/scores.arff
+	Expect PFD files: True
+	Expect PHCX files: False
+	Expect SUPERB PHCX files: False
+	Produce ARFF file: True
+	Candidate directory: /home/bhaswati/Machine_Learning/7june2k15/pfd
+	Process single candidate: False
+	Label candidates: False
+	Generate DM and profile stats as scores only: True
+	Search local directory: False 
+
+
+
+Candidates processed:	14177
+Successes:	14177
+Failures:	0
+Execution time:  0:15:33.654464
+Done.
+

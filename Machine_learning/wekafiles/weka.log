@@ -1,0 +1,27 @@
+2016-02-02 12:10:11 weka.gui.GUIChooser main
+INFO: Logging started
+Refreshing GOE props...
+---Registering Weka Editors---
+Trying to add database driver (JDBC): RmiJdbc.RJDriver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): jdbc.idbDriver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): org.gjt.mm.mysql.Driver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): com.mckoi.JDBCDriver - Warning, not in CLASSPATH?
+Trying to add database driver (JDBC): org.hsqldb.jdbcDriver - Warning, not in CLASSPATH?
+[KnowledgeFlow] Loading properties and plugins...
+[KnowledgeFlow] Initializing KF...
+2016-02-02 12:10:20 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2016-02-02 12:10:20 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2013 The University of Waikato, Hamilton, New Zealand
+2016-02-02 12:10:20 weka.gui.explorer.Explorer <init>
+INFO: web: http://www.cs.waikato.ac.nz/~ml/weka/
+2016-02-02 12:10:20 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 2 February 2016
+2016-02-02 12:11:03 weka.gui.explorer.PreprocessPanel$14 run
+INFO: Base relation is now PulsarCandidates_2016-02-02T11:24:43.723025 (779 instances)
+2016-02-02 12:11:27 weka.gui.explorer.ClassifierPanel$18 run
+INFO: Started weka.classifiers.trees.J48
+2016-02-02 12:11:27 weka.gui.explorer.ClassifierPanel$18 run
+INFO: Command: weka.classifiers.trees.J48 -C 0.25 -M 2
+2016-02-02 12:11:27 weka.gui.explorer.ClassifierPanel$18 run
+INFO: Finished weka.classifiers.trees.J48

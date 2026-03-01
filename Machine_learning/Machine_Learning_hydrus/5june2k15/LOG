@@ -1,0 +1,10 @@
+Candidates processed:	16949
+Successes:	16949
+Failures:	0
+Execution time:  0:15:39.599683
+Done.
+J48Tester - Predicting using J48 completed in 1005387627 (ns) or 1.005387627 (s)
+J48Tester - Predicted positive: 55 predicted negative 16894
+Controller executed successfully.
+Exiting
+

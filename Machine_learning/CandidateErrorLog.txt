@@ -1,0 +1,15 @@
+pfd_repo//index4415HR_1456-51_IA_search_DM7.650_ACCEL_50_ACCEL_Cand_5.pfd
+pfd_repo//index44420HR_1456-51_IA_search_DM3.680_ACCEL_50_ACCEL_Cand_20.pfd
+pfd_repo//index4718HR_1456-51_IA_search_DM1.470_ACCEL_50_ACCEL_Cand_8.pfd
+pfd_repo//index4746HR_1456-51_IA_search_DM6.440_ACCEL_50_ACCEL_Cand_6.pfd
+pfd_repo//index4913HR_1456-51_IA_search_DM15.680_ACCEL_50_ACCEL_Cand_3.pfd
+pfd_repo//index4935HR_1456-51_IA_search_DM11.500_ACCEL_50_ACCEL_Cand_5.pfd
+pfd_repo//index4947HR_1456-51_IA_search_DM11.630_ACCEL_50_ACCEL_Cand_7.pfd
+pfd_repo//index4978HR_1456-51_IA_search_DM11.310_ACCEL_50_ACCEL_Cand_8.pfd
+pfd_repo//index49811HR_1456-51_IA_search_DM11.480_ACCEL_50_ACCEL_Cand_11.pfd
+pfd_repo//index50682HR_1456-51_IA_search_DM1.070_ACCEL_50_ACCEL_Cand_82.pfd
+pfd_repo//index51361HR_1456-51_IA_search_DM6.230_ACCEL_50_ACCEL_Cand_61.pfd
+pfd_repo//index516HR_1456-51_IA_search_DM294.20_ACCEL_50_ACCEL_Cand_16.pfd
+pfd_repo//index13123HR_1456-51_IA_search_DM268.00_ACCEL_50_ACCEL_Cand_23.pfd
+pfd_repo/12feb2k18/HR_1456-51//index24547HR_1456-51_IA_search_DM5.520_ACCEL_50_ACCEL_Cand_47.pfd
+pfd_repo/12feb2k18/HR_1456-51//index24754HR_1456-51_IA_search_DM5.670_ACCEL_50_ACCEL_Cand_54.pfd

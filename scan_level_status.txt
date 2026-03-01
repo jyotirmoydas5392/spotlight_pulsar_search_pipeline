@@ -1,0 +1,2 @@
+ObsID,ScanName,BeamData,FilData
+49_052,NA,False,False

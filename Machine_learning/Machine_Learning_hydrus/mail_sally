@@ -1,0 +1,41 @@
+The classifier worked on the candidates. There are 34 positive predictions out of 7555.
+
+Here are the instructions for using the classifier:
+
+Step 1: Generate Scores using ScoreGenerator.py
+
+-c The path to the directory containing candidates.
+-v Verbose debugging flag (optional).
+-o The path to write scores to -> letter o.
+--pfd Flag which indicates that ONLY pfd files are being processed.
+--dmprof Flag which indicates that DM Curve and Profile statistic scores should be generated.
+--arff Flag that tells the code to output the scores to a single Weka ARFF file.
+
+Example: 
+
+python /home/cooper/PulsarProcessingScripts/src/CandidateScoreGenerators/ScoreGenerator.py -c /home/bhaswati/28_046_6may2k15_pfds/28_046_6may2k15_pfds -o /home/cooper/GHRSS-Results/bhaswatiCands/scores.arff --pfd --arff -dmprof
+
+As a rough estimate it takes approximately 1 second per candidate to generate the scores. 
+
+
+Step 2. Classifying
+
+This is the java appelet that is based on WEKA. It needs the training model (I have used the model that was trained on 11 million HTRU candidates). 
+
+% -v
+Verbose logging flag.
+% -o
+Path to the file to write output data to.
+% -p
+Execute the classifier on an arff file.
+% -a
+The algorithm to use for classification. Decision tree = 1, Multi-layer perception (NN) = 2, Naive Bayes = 3, support vector machine (SVM) = 4, HDVFDT = 5 (my stream algorithm).
+% -m
+The location to save a classification model to.
+
+Example (this was run from inside /home/cooper/PulsarProcessingScripts/): 
+
+
+java -jar ML.jar -v -m/home/cooper/HTRU_CLASSIFIER/HTRU_DT.model -o/home/cooper/GHRSS-Results/bhaswatiCands/predictions.txt -p/home/cooper/GHRSS-Results/bhaswatiCands/scores.arff -a1
+
+

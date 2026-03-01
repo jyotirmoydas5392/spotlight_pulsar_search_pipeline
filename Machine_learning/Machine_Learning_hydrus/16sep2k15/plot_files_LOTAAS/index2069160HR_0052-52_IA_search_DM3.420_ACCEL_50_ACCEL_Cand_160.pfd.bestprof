@@ -1,0 +1,30 @@
+# Input file       =  HR_0052-52_IA_search.zeroDM.fil
+# Candidate        =  ACCEL_Cand_160
+# Telescope        =  GMRT
+# Epoch_topo       =  57280.820669887289
+# Epoch_bary (MJD) =  57280.825014145958
+# T_sample         =  6.144e-05
+# Data Folded      =  17694208
+# Data Avg         =  131061.106578021 
+# Data StdDev      =  114.216085388285 
+# Profile Bins     =  3
+# Profile Avg      =  773007385603.62  
+# Profile StdDev   =  277384.107999676 
+# Reduced chi-sqr  =  1.907
+# Prob(Noise)      <  0.148   (~1.0 sigma)
+# Best DM          =  3.420
+# P_topo (ms)      =  0.177714516534404 +/- 1.45e-08
+# P'_topo (s/s)    =  -1.0032381320391e-12 +/- 2.08e-13
+# P''_topo (s/s^2) =  0                 +/- 1.23e-15
+# P_bary (ms)      =  0.177712442032041 +/- 1.45e-08
+# P'_bary (s/s)    =  -1.01544076830294e-12 +/- 2.08e-13
+# P''_bary (s/s^2) =  -2.05291566446382e-18 +/- 1.23e-15
+# P_orb (s)        =  N/A
+# asin(i)/c (s)    =  N/A
+# eccentricity     =  N/A
+# w (rad)          =  N/A
+# T_peri           =  N/A
+######################################################
+   0  7.730073e+11
+   1  7.730071e+11
+   2  7.730077e+11
