@@ -1,0 +1,38 @@
+range  00  5  0.1  1 1
+-range	150  300  0.2  1 1
+sigma_cutoff	6
+sigma_constant  3.0
+max_boxcar_width_in_sec 0.5
+periodicity_sigma_cutoff 6
+periodicity_harmonics 32
+fdas_harmonics 32
+selected_card_id 1
+analysis
+acceleration
+-acceleration_jerk
+z_max 200
+z_step 2
+w_max 800
+w_step 20
+-output_ffdot_plan
+output_fdas_list
+-set_bandpass_average
+output_DDTR_normalization
+-periodicity
+output_dmt
+-copy_ddtr_data_to_host
+-dered
+-zero_dm
+-zero_dm_with_outliers
+-rfi
+-oldrfi
+threshold
+baselinenoise
+-fdas_custom_fft
+-fdas_inbin
+-fdas_norm
+fdas_harm
+debug
+-analysis_debug
+-failsafe
+file /lustre_archive/spotlight/data/NGC6681_pa_550_200_4096_chopped.fil

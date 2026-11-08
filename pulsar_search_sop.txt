@@ -1,0 +1,60 @@
+Standard Operating Procedure (SOP) for Running the PULSAR SEARCH SCRIPT
+------------------------------------------------------------------------
+
+Currently the code is located here:
+Location: /lustre_archive/spotlight/data/pulsar_search_test_pipeline/
+
+Prerequisites:
+
+Environment Setup:
+source /lustre_archive/apps/tdsoft/env.sh
+
+Input Files and Directories:
+Prepare the input_file_directory.txt configuration file with the necessary parameters.
+
+Definign GPU resources:
+Place avail_gpu_nodes.txt in the specified directory, listing the nodes available for GPU processing.
+
+Dependencies:
+Ensure that all required scripts (input_file_generator.py, pulseline_runner.py, etc.) exist in the paths specified in the script.
+
+Permissions:
+Verify read/write permissions for all input, output, and log directories.
+
+CODE Execution Steps:
+Navigate to the Script Directory: for now which is /lustre_archive/spotlight/data/pulsar_search_test_pipeline/
+
+Setup the environment:
+source /lustre_archive/apps/tdsoft/env.sh
+
+Run the code:
+python3 Pulsar_search.py
+
+The script will print progress and error messages to the console.
+Logs for GPU processing and CPU post-processing will be written to the specified log directory (aa_log_dir).
+
+Generated Outputs:
+GPU Processed Data: Stored in the directory specified by aa_output_dir.
+Log Files: Located in aa_log_dir for debugging or audit purposes.
+
+
+Workflow Overview:
+
+Configuration File Loading:
+
+The script reads input_file_directory.txt to obtain paths and runtime parameters.
+Input File Generation:
+
+The script executes input_file_generator.py to prepare input files for processing.
+GPU Node Processing:
+
+Files are assigned to GPUs on available nodes as listed in avail_gpu_nodes.txt.
+Sequential File Processing:
+
+Each GPU processes assigned files sequentially.
+Astro-Accelerate is run via SSH on the GPU node, followed by local CPU tasks.
+Parallel Processing:
+Each node runs two processes concurrently (one per GPU) with specified delays to avoid resource contention.
+
+Post-Processing:
+CPU post-processing is handled locally on the GPU node, integrating output from GPU tasks.

@@ -1,0 +1,55 @@
+#Input Configuration File for Pulsar Search Pipeline
+# ---------------------------------------------------
+
+# Input Data File
+fil_file              = /lustre_data/spotlight/data/51_067_20261030_191339/FilData/SN26ACXA_20261030_192410/BM121.fil  # The .fil file containing raw pulsar observation data.
+
+# ---------------------------------------------------
+# Parameters for Search level Candidate Sorting
+# ---------------------------------------------------
+start_DM              = 00.00  # Starting Dispersion Measure (DM) value for the search range (same as used in AA search).
+end_DM                = 100.0 # Ending DM value for the search range (same as used in AA search).
+dm_step               = 1.0    # Step size for DM trials (same as used in AA search); smaller values improve resolution but increase computation time.
+accel_bin             = 200    # Number of bins used for acceleration searches.
+DM_filtering_cut_10   = 1.5    # Dispersion measure tolerance in pc/cc for a 10 ms candidate
+DM_filtering_cut_1000 = 8      # Dispersion measure tolerance in pc/cc for a 1000 ms candidate
+period_tol_init_sort  = 0.5    # Tolerance for grouping candidates with similar periods (as a percentage of the period) in search level sorting.
+period_tol_rfi_sort   = 0.25  # Tolerance for flagging RFI candidates (as a percentage of the period
+low_period            = 5.0    # Minimum period (in ms) to consider for candidates.
+high_period           = 1000.0  # Maximum period (in ms) to consider for candidates.
+SNR_cut               = 10.0    # Signal-to-noise ratio (SNR) threshold for filtering weak signals.
+harm_cut              = 3      # Minimum number of harmonics needs to be present to consider the candiate to be a valid one.
+
+# ---------------------------------------------------
+# Parameters for Harmonic Optimization
+# ---------------------------------------------------
+harmonic_opt_flag     =   0    # Enable harmonic optimization
+                                #   0 = Disabled
+                                #   1 = Enabled
+max_harm              = 20      # Upto which harmonic we want to look for harmonic optimisation
+period_tol_harm       = 0.01    # Tolerance for identifying harmonically related candidates (as a percentage of the period).
+
+# ---------------------------------------------------
+# Parameters for Beam level Candidate Sorting
+# ---------------------------------------------------
+beam_sort_flag     = 1        # Enable beam level sorting output files to read for final folding
+                                 #   0 = If beam level sifting is disabled in input_file_directory.txt file
+                                 #   1 = If beam level sifting is enabled in input_file_directory.txt file
+period_tol_beam_sort  = 0.25   # Tolerance for grouping candidates with similar periods (as a percentage of the period) in beam level sorting.
+
+# ---------------------------------------------------
+# Parameters for Folding Candidates
+# ---------------------------------------------------
+fold_soft             = 0      # Folding software selection:
+                                #   0 = Default software
+                                #   1 = Alternative software
+fold_type             = 1      # Folding type:
+                                #   0 = Fold into DAT files only
+                                #   1 = Fold into FIL files only
+                                #   2 = Fold into both DAT and FIL files
+
+# ---------------------------------------------------
+# Notes
+# - Ensure all input files and directories are accessible before execution.
+# - DM range (start_DM, end_DM, dm_step) should match the values used during the AA search.
+# - Modify these parameters based on the specifics of the data and desired search precision.

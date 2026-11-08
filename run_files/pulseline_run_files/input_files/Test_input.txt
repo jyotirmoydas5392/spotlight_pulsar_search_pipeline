@@ -1,0 +1,46 @@
+# ---------------------------------------------------
+# Input Configuration File for Pulsar Search Pipeline
+# ---------------------------------------------------
+
+# Input Data File
+fil_file                 : Test.fil         # The .fil file containing raw pulsar observation data.
+
+# ---------------------------------------------------
+# Parameters for Candidate Sorting
+# ---------------------------------------------------
+start_DM                 : 70.00            # Starting Dispersion Measure (DM) value for the search range (same as used in AA search).
+end_DM                   : 72.00            # Ending DM value for the search range (same as used in AA search).
+dm_step                  : 0.1              # Step size for DM trials (same as used in AA search); smaller values improve resolution but increase computation time.
+accel_bin                : 200              # Number of bins used for acceleration searches.
+DM_filtering_cut         : 4                # Minimum number of consecutive DM values where a candidate must be present to be considered valid.
+period_tol_sort          : 0.5              # Tolerance for grouping candidates with similar periods (as a percentage of the period).
+low_period               : 1.0              # Minimum period (in ms) to consider for candidates.
+high_period              : 1000.0           # Maximum period (in ms) to consider for candidates.
+SNR_cut                  : 4.0              # Signal-to-noise ratio (SNR) threshold for filtering weak signals.
+
+# ---------------------------------------------------
+# Parameters for Harmonic Optimization
+# ---------------------------------------------------
+harmonic_flag            : 1                # Enable harmonic summation:
+                                            #   1 = Enabled
+                                            #   0 = Disabled
+period_tol_harm          : 0.5              # Tolerance for identifying harmonically related candidates (as a percentage of the period).
+
+# ---------------------------------------------------
+# Parameters for Folding Candidates
+# ---------------------------------------------------
+fold_soft                : 0                # Folding software selection:
+                                            #   0 = Default software
+                                            #   1 = Alternative software
+fold_type                : 2                # Folding type:
+                                            #   0 = Fold into DAT files only
+                                            #   1 = Fold into FIL files only
+                                            #   2 = Fold into both DAT and FIL files
+workers_per_node         : 20               # Number of processing threads per node for parallel processing during folding.
+
+# ---------------------------------------------------
+# Notes
+# - Ensure all input files and directories are accessible before execution.
+# - DM range (start_DM, end_DM, dm_step) should match the values used during the AA search.
+# - Modify these parameters based on the specifics of the data and desired search precision.
+# ---------------------------------------------------
