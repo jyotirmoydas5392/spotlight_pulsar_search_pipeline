@@ -1,0 +1,9 @@
+Coverage statistics
+===================
+
+NSIDE = 512
+Retained beams = 234287
+Covered pixels = 30148
+Covered area (deg^2) = 395.36
+Sky fraction = 0.009584
+Maximum overlap = 7801

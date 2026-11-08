@@ -1,0 +1,13 @@
+
+Candidates processed:	9467
+Successes:	9467
+Failures:	0
+Execution time:  0:07:53.511514
+Done.
+
+
+J48Tester - Prediction set instances: 9467
+Classifying instance: 0
+J48Tester - Predicting using J48 completed in 554733142 (ns) or 0.554733142 (s)
+J48Tester - Predicted positive: 23 predicted negative 9444
+

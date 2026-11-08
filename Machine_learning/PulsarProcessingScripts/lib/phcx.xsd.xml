@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <xs:element name="phcf">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="head">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="SourceID" type="xs:string"></xs:element>
+                                             <xs:element name="Telescope" type="xs:string"></xs:element>
+                                             <xs:element name="Coordinate">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="RA" type="xs:double">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Dec" type="xs:double">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Epoch" type="xs:string"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="CentreFreq" type="xs:int">
+                                                   <xs:complexType>
+                                                         <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="BandWidth" type="xs:int">
+                                                   <xs:complexType>
+                                                         <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="MjdStart" type="xs:double"></xs:element>
+                                             <xs:element name="ObservationLength" type="xs:double">
+                                                   <xs:complexType>
+                                                         <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                           <xs:element name="Section" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="BestValues">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="TopoPeriod" type="xs:double">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="BaryPeriod" type="xs:double">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Dm" type="xs:double"></xs:element>
+                                                               <xs:element name="Accn" type="xs:int">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Jerk" type="xs:int">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="units" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="Snr" type="xs:double"></xs:element>
+                                                               <xs:element name="Width" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="SampleRate" type="xs:int"></xs:element>
+                                             <xs:element name="SubIntegrations" type="xs:string">
+                                                   <xs:complexType>
+                                                         <xs:attribute name="nBins" type="xs:int"></xs:attribute>
+                                                         <xs:attribute name="nSub" type="xs:int"></xs:attribute>
+                                                         <xs:attribute name="format" type="xs:string"></xs:attribute>
+                                                         <xs:attribute name="min" type="xs:int"></xs:attribute>
+                                                         <xs:attribute name="max" type="xs:int"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="SubBands" type="xs:string">
+                                                   <xs:complexType>
+                                                         <xs:attribute name="nBins" type="xs:int"></xs:attribute>
+                                                         <xs:attribute name="nSub" type="xs:int"></xs:attribute>
+                                                         <xs:attribute name="format" type="xs:string"></xs:attribute>
+                                                         <xs:attribute name="min" type="xs:int"></xs:attribute>
+                                                         <xs:attribute name="max" type="xs:int"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="Profile" type="xs:string">
+                                                   <xs:complexType>
+                                                         <xs:attribute name="nBins" type="xs:int"></xs:attribute>
+                                                         <xs:attribute name="format" type="xs:string"></xs:attribute>
+                                                         <xs:attribute name="min" type="xs:double"></xs:attribute>
+                                                         <xs:attribute name="max" type="xs:double"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="SnrBlock">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="PeriodIndex" type="xs:double">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="nVals" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="format" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="DmIndex" type="xs:string">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="nVals" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="format" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="AccnIndex" type="xs:int">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="nVals" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="format" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="JerkIndex" type="xs:int">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="nVals" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="format" type="xs:string"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                               <xs:element name="DataBlock" type="xs:string">
+                                                                     <xs:complexType>
+                                                                           <xs:attribute name="format" type="xs:string"></xs:attribute>
+                                                                           <xs:attribute name="min" type="xs:int"></xs:attribute>
+                                                                           <xs:attribute name="max" type="xs:double"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="SecExtra" maxOccurs="unbounded" type="xs:int">
+                                                   <xs:complexType>
+                                                         <xs:attribute name="key" type="xs:string"></xs:attribute>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                       <xs:attribute name="name" type="xs:string"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>

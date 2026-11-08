@@ -1,0 +1,85 @@
+Step :1
+
+go to the ibm dir and make a tar file with all the *pfd files in a given epoch with
+type the following in res dir
+tar -cvf epoch_all.tar */fold*/*pfd
+
+Step -2 
+copy to jroy@wm 
+ scp 30apr_all.tar jroy@wm.ncra.tifr.res.in:/data/pub/jroy
+
+in hydrus 
+cd /home/bhaswati/Machine_Learning
+make a dir with the date
+mkdir 30apr2k15
+
+Step -3
+scp jroy@wm.ncra.tifr.res.in:/data/pub/jroy/30apr_all.tar .
+tar xvf ...
+mkdir pfd 
+ensure that all the pfd files are in this dir
+
+Step-4
+source /home/bhaswati/.cshrc_machine_learning ( or source /home/cooper/.cshrc)
+
+Step-5
+
+python /home/bhaswati/PulsarProcessingScripts/src/CandidateScoreGenerators/ScoreGenerator.py -c /home/bhaswati/Machine_Learning/30apr2k15/pfd -o /home/bhaswati/Machine_Learning/30apr2k15/scores.arff --pfd --arff --dmprof
+
+[check Sally's emailfor details]
+take some time 1 s per candidate
+
+Step -5 check 
+For candidate classification with HTRU list
+java -jar /home/bhaswati/HTRU_CLASSIFIER_STUFF/ML.jar -v -m/home/bhaswati/HTRU_CLASSIFIER_STUFF/HTRU_DT.model -o/home/bhaswati/Machine_Learning/30apr2k15/prediction_30apr.txt -p/home/bhaswati/Machine_Learning/30apr2k15/scores.arff -a1
+
+java -jar /home/bhaswati/HTRU_CLASSIFIER_STUFF/ML.jar -v -m/home/bhaswati/HTRU_CLASSIFIER_STUFF/DT_LOTAAS.model -o/home/bhaswati/Machine_Learning/30apr2k15/predict_30jun2k15_lotaas.txt -p/home/bhaswati/Machine_Learning/30apr2k15/scores.arff -a1
+
+
+Step -6
+cp /home/bhaswati/Machine_Learning/cand_ps.csh .
+
+Step-7
+make the cand_file
+awk -F , '{print $1 }' prediction_30apr2k15.txt >cand_file
+
+Step-7
+cand_ps.csh
+will create the ps file for the cands
+
+Step-8
+go to your lap top
+cd /Users/mbessbb4/GHRSS_results/machine_learning/
+make a directory with the date
+cd dir
+cp -p -r bhaswati@hydrus.jb.man.ac.uk:/home/bhaswati/Machine_Learning/30apr2k15/plot_files/* .
+follow nnote_combine to combine these to a single pdf file and the view
+Step 9
+-----
+combine the ps files to a single pdf file wiht 
+
+============================
+Training 
+Make a training set with pfd files of pulsars and another with non pulsar rfis
+add the new pulsars to the list. 
+Use the known pulsar set and rfi set of pfds and repeat step-5 
+>python /home/bhaswati/PulsarProcessingScripts/src/CandidateScoreGenerators/ScoreGenerator.py -c /disks/8/jroy/Machine_learning_cands/test_set/rfi_new -o /disks/8/jroy/Machine_learning_cands/test_set/negative_train.arff --pfd --arff --dmprof
+
+python /home/bhaswati/PulsarProcessingScripts/src/CandidateScoreGenerators/ScoreGenerator.py -c /disks/8/jroy/Machine_learning_cands/test_set/GHRSS_known -o /disks/8/jroy/Machine_learning_cands/test_set/positive_train.arff --pfd --arff --dmprof
+
+open the *arff files and replace ? by 1 in case of known pulsars and by 0 in case of rfi
+
+
+cd /home/cooper/weka-3-7-10/
+java -jar weka.jar
+
+This will open a promt to work.
+open Weka Explorer
+supply the name of the training set
+choose J48 classifier from the decision tree
+classify
+and save the classification file in a GMRT.model name save in  /home/bhaswati/HTRU_CLASSIFIER_STUFF/
+go back to /disks/8/jroy/Machine_learning_cands/test_set and run step 5 with GMRT.model
+check from negative list the candidates that are not being considered as psrs.
+
+DO the machine learning stuff with both LOTAAS and GMRT model and check the diff

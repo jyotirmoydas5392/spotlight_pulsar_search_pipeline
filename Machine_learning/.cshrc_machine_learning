@@ -1,0 +1,26 @@
+if ( -e /share/apps/pulsar/login/psr.cshrc ) then
+source /share/apps/pulsar/login/psr.cshrc
+endif
+
+
+
+#setenv LD_LIBRARY_PATH /opt/openmpi/lib:/opt/python/lib:/home/cooper/LOFARSOFT/release/share/pulsar/lib:/home/cooper/LOFARSOFT/release/lib:/home/cooper/packages/bin/:/share/apps/Python2.6/lib/:/usr/lib/gcc/x86_64-redhat-linux/4.4.4/:/usr/lib64/
+
+#PYTHON
+
+setenv PYTHONPATH /share/apps/pulsar/dist/x86_64_carbon/share/python:/share/apps/pulsar/dist/share/python:/home/cooper/Python/lib/python2.6/site-packages/
+
+#setenv PYTHONPATH /home/cooper/LOFARSOFT/release/lib/python/:/home/cooper/LOFARSOFT/release/bin/:/home/cooper/LOFARSOFT/release/share/pulsar/bin/:/home/cooper/GHRSS-Scripts/:/home/cooper/scripts/://home/cooper/LOFARSOFT/release/share/pulsar/lib/python/
+
+#PRESTO
+#setenv PRESTO /home/cooper/LOFARSOFT/release/share/pulsar/
+setenv PRESTO /share/apps/pulsar/dist/x86_64_carbon/share/presto
+
+
+
+# PGPLOT stuff
+#setenv PGPLOT_DIR /home/cooper/packages_gfortran/pgplot/
+#setenv PGPLOT_FONT $PGPLOT_DIR/grfont.dat
+#setenv LD_LIBRARY_PATH {$PGPLOT_DIR}:${LD_LIBRARY_PATH}:/share/apps/atlas/lib/:/usr/lib64/
+
+setenv PATH ${PATH}:/home/cooper/scripts

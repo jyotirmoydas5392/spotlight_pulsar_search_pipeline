@@ -1,0 +1,20 @@
+# All pulsar candidate from a scan
+
+ls -ltrh /home/bhaswati/psrsoft/usr/src/Machine_learning/pfd_repo/12feb2k18/HR_1456-51/*pfd
+
+# visualise a pfd file
+
+show_pdf *pfd
+
+# Generating scores
+python /home/bhaswati/psrsoft/usr/src/Machine_learning/PulsarProcessingScripts/src/CandidateScoreGenerators/ScoreGenerator.py -c /data1/GHRSS_ML_pfd/2jun2k18/pfd -o /data1/GHRSS_ML_pfd/2jun2k18/scores.arff --pfd --arff --dmprof
+
+# Candidate classification using LOTAAS classifier model
+
+java -jar /home/bhaswati/psrsoft/usr/src/Machine_learning/HTRU_CLASSIFIER_STUFF/ML.jar -v -m/home/bhaswati/psrsoft/usr/src/Machine_learning/HTRU_CLASSIFIER_STUFF/DT_LOTAAS.model -o/home/bhaswati/psrsoft/usr/src/Machine_learning/pfd_repo/12feb2k18/HR_1456-51/predict_12feb2k18_ghrss.txt -p/home/bhaswati/psrsoft/usr/src/Machine_learning/scores/scores.arff -a1
+
+# final candidates to see
+
+more /home/bhaswati/psrsoft/usr/src/Machine_learning/pfd_repo/12feb2k18/HR_1456-51/predict_12feb2k18_ghrss.txt
+
+gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=6may.pdf -dBATCH *ps

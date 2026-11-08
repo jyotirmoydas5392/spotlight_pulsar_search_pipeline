@@ -1,0 +1,739 @@
+<?xml version="1.0"?>
+<project name="Ant-Test" default="main" basedir=".">
+	<!-- 
+	
+	This is the ant build file for this project. It is used to automate the building,
+	and testing of the python scripts contained herein - it is really useful. If you don't
+	have ant / never heard of it, its probably worth looking at how it works. But for
+	now if you install the Eclipse IDE with pydev to build this project, then ant should be
+	already installed for you. Simply run this script within Eclipse and you'll see building
+	and testing run automatically.
+	
+	Rob.
+	-->
+	
+	<!-- Sets variables which can later be used. -->
+	<property name="src.dir" location="src" />
+	<property name="lib.dir" location="lib" />
+	<property name="test.dir" location="test" />
+	<property name="dist.dir" location="dist" />
+	<property name="scratch.dir" location="scratch" />
+
+	<!-- Deletes the existing build, docs and dist directory -->
+	<target name="clean">
+		<delete dir="${dist.dir}" />
+		<delete dir="${test.dir}" />
+		<delete dir="${scratch.dir}" />
+	</target>
+
+	<!-- Creates the build, docs and dist directory -->
+	<target name="makedir">
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${test.dir}" />
+		<mkdir dir="${scratch.dir}" />
+	</target>
+
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- COPY FILES AND PREPARE FOR TESTS  	-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	
+	<!-- 					   			 -->
+	<!-- 
+		 Prepares the scratch directory: 
+	     This is a directory into which unlabeled candidates can be dropped.
+	     The CandidateLabeler.py script can then be executed to label these
+	     candidates, providing more data for the score validation framework.
+	 -->
+	<!-- 					   			-->
+	
+	<target name="prepareScratch" depends="clean, makedir">
+			
+		<!-- Copy labelling code to scratch direcotry. -->
+		<copy todir="${scratch.dir}" overwrite="true">
+		  <fileset dir="${src.dir}/CandidateLabeler">
+		    <include name="**/*" />
+		  	<exclude name="**/__init__.py" />
+		  </fileset>
+		</copy>
+	
+	</target>
+	
+	<!-- 					   		   -->
+	<!-- PREPARE HTRU CANDIDATE TESTS  -->
+	<!-- 					           -->
+	
+	<target name="copyHTRU" depends="prepareScratch,clean, makedir">
+		
+		<!-- Copy score generation code to the distribution direcotry. -->
+		<copy todir="${dist.dir}" overwrite="true">
+			<fileset dir="${src.dir}/CandidateScoreGenerators">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+		
+		<!-- Copy score generation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+		  <fileset dir="${src.dir}/CandidateScoreGenerators">
+		    <include name="**/*" />
+		  	<exclude name="**/__init__.py" />
+		  </fileset>
+		</copy>
+		
+		<!-- Copy the extreme candidate data to the test directory. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${lib.dir}/HTRU_Candidate_Examples">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+	
+		<copy file="${lib.dir}/HTRU_Candidate_OriginalScores.csv" tofile="${test.dir}/HTRU_Scores.csv"/>
+	</target>
+	
+	<!-- 					              		  -->
+	<!-- PREPARE LOFAR OLD SCRIPT CANDIDATE TESTS -->
+	<!-- 					                      -->
+	
+	<target name="copyOldLOFAR" depends="prepareScratch,clean, makedir">
+	
+		<!-- Copy score generation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/LegacyScoreGeneratorsLOFAR/MinimalWorkingExample">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+			
+		<!-- Copy the candidate data to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${lib.dir}/LOFAR_Candidate_Examples">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		
+	</target>
+	
+	<!-- 					   		   -->
+	<!-- PREPARE LOFAR CANDIDATE TESTS -->
+	<!-- 					  		   -->
+	
+	<target name="copyLOFAR" depends="prepareScratch,clean, makedir">
+	
+		<!-- Copy score generation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/CandidateScoreGenerators">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+			
+		<!-- Copy the candidate data to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${lib.dir}/LOFAR_Candidate_Examples">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		
+	</target>
+	
+	<!-- 					       		   -->
+	<!-- PREPARE COMBINED CANDIDATE TESTS  -->
+	<!-- 					               -->
+	
+	<!-- These tests use both LOFAR and HTRU data -->
+	<target name="copyHTRUAndLOFAR" depends="prepareScratch,clean, makedir">
+			
+		<!-- Copy score generation code to the distribution direcotry. -->
+		<copy todir="${dist.dir}" overwrite="true">
+			<fileset dir="${src.dir}/CandidateScoreGenerators">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+			
+		<!-- Copy score generation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/CandidateScoreGenerators">
+			    <include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+			
+		<!-- Copy the extreme candidate data to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${lib.dir}/HTRU_Candidate_Examples">
+				<include name="**/*" />
+			</fileset>
+			<fileset dir="${lib.dir}/LOFAR_Candidate_Examples">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+		
+		<!-- Copy extreme candidate meta data to the test directory. -->
+		<copy file="${lib.dir}/LOFAR_Candidate_OriginalScores.csv" tofile="${test.dir}/LOFAR_Scores.csv"/>
+		<copy file="${lib.dir}/HTRU_Candidate_OriginalScores.csv" tofile="${test.dir}/HTRU_Scores.csv"/>
+		<copy file="${lib.dir}/HTRU_AND_LOFAR_OriginalScores.csv" tofile="${test.dir}/HTRU_AND_LOFAR_Scores.csv"/>
+		
+	</target>
+	
+	<!-- 					       			  			  			  				   -->
+	<!-- PREPARE FOR TEST USING ALL AVAILABLE CANDIDATES (over 5000 so a longer test)  -->
+	<!-- 					                  			              				   -->
+		
+	<target name="copyALLCands" depends="prepareScratch,clean, makedir">
+			
+		<!-- Copy score generation code to the distribution direcotry. -->
+		<copy todir="${dist.dir}" overwrite="true">
+			<fileset dir="${src.dir}/CandidateScoreGenerators">
+				<include name="**/*" />
+				<exclude name="**/Images/*" />
+			</fileset>
+		</copy>
+			
+		<!-- Copy score generation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/CandidateScoreGenerators">
+			    <include name="**/*" />
+				<exclude name="**/__init__.py" />
+				<exclude name="**/Images/*" />
+			</fileset>
+		</copy>
+			
+		<!-- Copy the extreme candidate data to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${lib.dir}/HTRU_Candidate_Examples">
+				<include name="**/*" />
+				<exclude name="**/Images/*" />
+			</fileset>
+			<fileset dir="${lib.dir}/LOFAR_Candidate_Examples">
+				<include name="**/*" />
+				<exclude name="**/Images/*" />
+			</fileset>
+			<fileset dir="${lib.dir}/newphcx">
+				<include name="**/*" />
+				<exclude name="**/Images/*" />
+			</fileset>
+		</copy>
+		
+		<!-- Copy extreme candidate meta data to the test directory. -->
+		<copy file="${lib.dir}/MASTER_10000_Candidates.csv" tofile="${test.dir}/MASTER_Scores.csv"/>
+		
+	</target>
+	
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 		EXECUTE THE TESTS  			-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	<!-- 					   				-->
+	
+	<!-- Executes score generation script on small sample of HTRU data ONLY and perfroms validation on it. -->
+	<target name="mainHTRU" depends="copyHTRU">
+		<description>Main HTRU target</description>
+		
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py -v" />
+		</exec>
+		
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+				<exclude name="**/*.profile" />
+			</fileset>
+		</delete>
+		
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+				
+		<!-- Copy extreme candidate meta data to the test directory. -->
+		<copy file="${lib.dir}/HTRU_Candidate_OriginalScores.csv" tofile="${test.dir}/HTRU_Scores.csv"/>
+		
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m HTRU_Scores.csv -s 22" />
+		</exec>
+	</target>
+	
+	<!-- Executes legacy LOFAR score generation script and perfroms validation on it. -->
+	<target name="oldLOFAR" depends="copyOldLOFAR">
+		<description>Main LOFAR target</description>
+			
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="LOFAR_ScoreGenerator.py -v" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+			
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+			</fileset>
+		</delete>
+			
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+					
+		<!-- Copy extreme candidate meta data to the test directory. -->
+		<copy file="${lib.dir}/LOFAR_Candidate_OriginalScores.csv" tofile="${test.dir}/LOFAR_Scores.csv"/>
+			
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m LOFAR_Scores.csv -s 22" />
+		</exec>
+	</target>
+	
+	<!-- Executes new LOFAR score generation script and perfroms validation on it. -->
+	<target name="mainLOFAR" depends="copyLOFAR">
+		<description>Main LOFAR target</description>
+			
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py -v" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+			
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+			</fileset>
+		</delete>
+			
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+					
+		<!-- Copy extreme candidate meta data to the test directory. -->
+		<copy file="${lib.dir}/LOFAR_Candidate_OriginalScores.csv" tofile="${test.dir}/LOFAR_Scores.csv"/>
+			
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m LOFAR_Scores.csv -s 22" />
+		</exec>
+	</target>
+	
+	<!--
+			Based on the command line parameters there multiple possible execution paths:
+		    1. a) Generate candidate scores for phcx files, each candidate scores written to a separate file.
+		    1. b) Generate candidate scores for phcx files, each candidate scores written to ONE file.
+		    2. a) Generate candidate scores for pfd files, each candidate scores written to a separate file.
+		    2. b) Generate candidate scores for pfd files, each candidate scores written to a ONE file.
+		    3. a) Generate candidate scores for pfd AND phcx files, each candidate scores written to a separate file.
+		    3. b) Generate candidate scores for pfd AND phcx files, each candidate scores written to a ONE file.
+		    4. a) No details specified by user - look for pdf and phcx files and generate scores for them in separate files.
+		    
+		    These tests all use a sample of 82 HTRU candidates and currently 2 LOFAR candidates.
+		    
+		    5.	Runs unit test code only.
+		    6. Runs a score generation test on ALL available candidates, of which there are around 5,000. This
+		       Test run will take around 20-30 minuntes to complete.
+		-->
+	
+	<!--
+		1. a) Generate candidate scores for phcx files, each candidate scores written to a separate file.
+	-->
+	
+	<target name="Test1A" depends="copyHTRU">
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py --phcx -v" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+					
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+				<exclude name="**/*.csv" />
+				<exclude name="**/*.txt" />
+			</fileset>
+		</delete>
+					
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+					
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m HTRU_Scores.csv -s 22  -l" />
+		</exec>
+		
+	</target>
+	
+	<!--
+		1. b) Generate candidate scores for phcx files, each candidate scores written to ONE file.
+	-->
+	<target name="Test1B" depends="copyHTRU">
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py --phcx -o ANTOutput.txt --arff" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+						
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+				<exclude name="**/*.csv" />
+				<exclude name="**/*.txt" />
+			</fileset>
+		</delete>
+		
+	</target>
+	
+	<!--
+		2. a) Generate candidate scores for pfd files, each candidate scores written to a separate file.
+	-->
+	<target name="Test2A" depends="copyHTRUAndLOFAR">
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py -v --pfd" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+					
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+				<exclude name="**/*.csv" />
+				<exclude name="**/*.txt" />
+			</fileset>
+		</delete>
+					
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+					
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m LOFAR_Scores.csv -s 22  -l" />
+		</exec>
+		
+	</target>
+	
+	<!--
+		2. b) Generate candidate scores for pfd files, each candidate scores written to a ONE file.
+	-->
+	<target name="Test2B" depends="copyHTRUAndLOFAR">
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py --pfd -o ANTOutput.txt" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+						
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+				<exclude name="**/*.csv" />
+				<exclude name="**/*.txt" />
+			</fileset>
+		</delete>
+						
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+						
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m LOFAR_Scores.csv -s 22  -l" />
+		</exec>
+		
+	</target>
+	
+	<!--
+		3. a) Generate candidate scores for pfd AND phcx files, each candidate scores written to a separate file.
+	-->
+	<target name="Test3A" depends="copyHTRUAndLOFAR">
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py -v --pfd --phcx" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+					
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+				<exclude name="**/*.csv" />
+				<exclude name="**/*.txt" />
+			</fileset>
+		</delete>
+					
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+					
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m HTRU_Scores.csv -s 22" />
+		</exec>
+		
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m LOFAR_Scores.csv -s 22" />
+		</exec>
+		
+	</target>
+	
+	<!--
+		3. b) Generate candidate scores for pfd AND phcx files, each candidate scores written to a ONE file.
+	-->
+	<target name="Test3B" depends="copyHTRUAndLOFAR">
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py -v --pfd --phcx -o ANTOutput.txt" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+						
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+				<exclude name="**/*.csv" />
+				<exclude name="**/*.txt" />
+			</fileset>
+		</delete>
+						
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+						
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m HTRU_Scores.csv -s 22" />
+		</exec>
+				
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m LOFAR_Scores.csv -s 22" />
+		</exec>
+		
+	</target>
+	
+	<!--
+		4. No details specified by user - look for pdf and phcx files and generate scores for them in separate files.
+	-->
+	<target name="Test4" depends="copyHTRUAndLOFAR">
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+						
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+				<exclude name="**/*.csv" />
+				<exclude name="**/*.txt" />
+			</fileset>
+		</delete>
+						
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+						
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m HTRU_AND_LOFAR_Scores.csv -s 22 -l" />
+		</exec>
+		
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="UnitTester.py" />
+		</exec>
+			
+	</target>
+	
+	<!--
+		5. Unit test run in isolation.
+	-->
+	<target name="Test5" depends="copyHTRUAndLOFAR">
+						
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+						
+		<!-- Run unit test script. -->	
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="UnitTester.py" />
+		</exec>
+			
+	</target>
+	
+	<!--
+		6. Tets on thousands of candidates.
+	-->
+	<target name="Test6" depends="copyALLCands">
+		<!-- Run score generation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreGenerator.py" />
+			<!-- ALL PARAMETERS -->
+			<!--<arg line="ScoreGenerator.py -v -c -s -pfd -phcx" />-->
+		</exec>
+						
+		<!-- Delete score generation script files and uneeded data. -->
+		<delete>
+			<fileset dir="${test.dir}">
+				<include name="**/*" />
+				<exclude name="**/*.dat" />
+				<exclude name="**/*.csv" />
+				<exclude name="**/*.txt" />
+			</fileset>
+		</delete>
+						
+		<!-- Copy validation code to the test direcotry. -->
+		<copy todir="${test.dir}" overwrite="true">
+			<fileset dir="${src.dir}/Validation">
+				<include name="**/*" />
+				<exclude name="**/__init__.py" />
+			</fileset>
+		</copy>
+						
+		<!-- Run validation script. -->
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="ScoreValidation.py -m MASTER_Scores.csv -s 22 -l" />
+		</exec>
+		
+		<!-- Copy the WEKA file produced during validation. -->
+		<copy file="${test.dir}/NewLabelledData.arff" tofile="${lib.dir}/NewLabelledData.arff"/>
+		<copy file="${test.dir}/NewLabelledDataPositives.arff" tofile="${lib.dir}/NewLabelledDataPositives.arff"/>
+		<copy file="${test.dir}/NewLabelledDataNegatives.arff" tofile="${lib.dir}/NewLabelledDataNegatives.arff"/>
+		<!-- Only execute when needed. --> 
+		<!--
+		<exec dir="${test.dir}" executable="python" failonerror="true">
+			<arg line="UnitTester.py" />
+		</exec>
+		-->
+		
+	</target>
+	
+	<!--
+		7. Classify newly generated scores.
+	-->
+	<target name="Test7" depends="prepareScratch">
+		<!-- Run score generation script. -->
+		
+		<delete file="${lib.dir}/Misclassifications.csv"/>
+		<delete file="${test.dir}/Misclassifications.csv"/>
+		
+		<exec dir="${lib.dir}" executable="java" failonerror="true">
+			<arg line="-jar AutomatedTreeTester.jar -t${lib.dir}/NewLabelledData.arff -o${lib.dir}/Misclassifications.csv -i${lib.dir}" />
+		</exec>
+		
+		<copy file="${lib.dir}/Misclassifications.csv" tofile="${scratch.dir}/Misclassifications.csv"/>
+		<copy file="${lib.dir}/Misclassifications.arff" tofile="${scratch.dir}/Misclassifications.arff"/>
+		
+	</target>
+	
+	<!-- 					       -->
+	<!--   PRIMARY BUILD TARGET    -->
+	<!-- 					       -->
+	
+	<!-- Actually execute the simplest build and test process -->
+		<!--
+			
+			Below simply change the value of name="" to choose a 
+			build and test procedure, i.e. set name="testHTRU" to run
+			a test using on HTRU candidate data.  
+			
+			OPTIONS:
+			
+		 	Based on the command line parameters there multiple possible execution paths:
+		    Test1A - Generate candidate scores for phcx files, each candidate scores written to a separate file.
+		    Test1B - Generate candidate scores for phcx files, each candidate scores written to ONE file.
+		    Test2A - Generate candidate scores for pfd files, each candidate scores written to a separate file.
+		    Test2B - Generate candidate scores for pfd files, each candidate scores written to a ONE file.
+		    Test3A - Generate candidate scores for pfd AND phcx files, each candidate scores written to a separate file.
+		    Test3C - Generate candidate scores for pfd AND phcx files, each candidate scores written to a ONE file.
+		    Test4  - No details specified by user - look for pdf and phcx files and generate scores for them in separate files.
+		    
+		    These tests all use a sample of 82 HTRU candidates and currently 2 LOFAR candidates.
+		    
+		    Test5 - Runs unit test code only.
+		    Test6 - Runs a score generation test on ALL available candidates, of which there are around 5,000. This
+		       		Test run will take around 20-30 minuntes to complete.
+		    Test7 - Classifying new score data and view missclassifications.
+		-->
+	
+	<target name="main" depends="Test2A" />
+	<!--<target name="main" depends="oldLOFAR" />-->
+	
+</project>

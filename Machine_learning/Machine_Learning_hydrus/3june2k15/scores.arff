@@ -1,0 +1,22 @@
+@relation PulsarCandidates_2015-11-09T15:00:37.258209
+@attribute Profile_mean numeric
+@attribute Profile_stdev numeric
+@attribute Profile_skewness numeric
+@attribute Profile_kurtosis numeric
+@attribute DM_mean numeric
+@attribute DM_stdev numeric
+@attribute DM_skewness numeric
+@attribute DM_kurtosis numeric
+@attribute class {0,1}
+@data
+@relation PulsarCandidates_2015-11-09T15:03:27.715192
+@attribute Profile_mean numeric
+@attribute Profile_stdev numeric
+@attribute Profile_skewness numeric
+@attribute Profile_kurtosis numeric
+@attribute DM_mean numeric
+@attribute DM_stdev numeric
+@attribute DM_skewness numeric
+@attribute DM_kurtosis numeric
+@attribute class {0,1}
+@data

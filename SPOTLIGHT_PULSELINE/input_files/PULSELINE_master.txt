@@ -1,0 +1,11 @@
+fil_file = Test.fil
+start_DM = 0.00
+end_DM = 10.02
+low_period = 1.0
+high_period = 1000.0
+dm_step = 0.1
+workers = 30
+DM_filtering_cut = 3
+SNR_cut = 5.0
+fold_type = 0.0
+period_tol = 0.5
