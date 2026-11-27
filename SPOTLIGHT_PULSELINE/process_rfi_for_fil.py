@@ -3,25 +3,9 @@ import sys
 import argparse
 import numpy as np
 
-# Get the base directory from an environment variable
-base_dir = os.getenv("PULSELINE_VER1_DIR")
-if not base_dir:
-    print("Error: PULSELINE_VER1_DIR environment variable is not set.")
-    sys.exit(1)
+# Base directory and sys.path are defined once in pulseline_config.py
+from pulseline_config import base_dir
 
-# List of relative subdirectories where script modules are located
-relative_paths = [
-    "input_file_dir_init/scripts",
-    "SPOTLIGHT_PULSELINE/scripts"
-]
-
-# Add the resolved full paths to sys.path so that Python can find and import them
-for relative_path in relative_paths:
-    full_path = os.path.join(base_dir, relative_path)
-    if os.path.exists(full_path):
-        sys.path.insert(0, full_path)
-    else:
-        print(f"Warning: Path does not exist and won't be added to sys.path: {full_path}")
 
 # Try importing required modules from custom script paths
 try:

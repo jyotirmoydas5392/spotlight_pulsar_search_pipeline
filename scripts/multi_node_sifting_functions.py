@@ -8,21 +8,9 @@ from multiprocessing import Pool, Process
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-# Load base directory from environment variable
-base_dir = os.getenv("PULSELINE_VER1_DIR")
-if not base_dir:
-    logging.error("Error: PULSELINE_VER1_DIR environment variable is not set.")
-    sys.exit(1)
+# Base directory and sys.path are defined once in pulseline_config.py
+from pulseline_config import base_dir
 
-# Add required paths to sys.path
-required_paths = ["input_file_dir_init/scripts"]
-for relative_path in required_paths:
-    full_path = os.path.join(base_dir, relative_path)
-    if os.path.exists(full_path):
-        sys.path.insert(0, full_path)
-        logging.info(f"Added to sys.path: {full_path}")
-    else:
-        logging.warning(f"Path does not exist: {full_path}")
 
 # Import required modules
 try:

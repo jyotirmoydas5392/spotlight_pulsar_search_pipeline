@@ -2,12 +2,9 @@ import os, sys, glob, shutil, logging, argparse
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
-base_dir = os.getenv("PULSELINE_VER1_DIR")
-if not base_dir:
-    logging.error("PULSELINE_VER1_DIR environment variable is not set.")
-    sys.exit(1)
+# Base directory and sys.path are defined once in pulseline_config.py
+from pulseline_config import base_dir
 
-sys.path.insert(0, os.path.join(base_dir, "input_file_dir_init/scripts"))
 from read_input_file_dir import load_parameters
 
 config_file_path = os.path.join(base_dir,"input_file_dir_init/input_dir/input_file_directory.txt")

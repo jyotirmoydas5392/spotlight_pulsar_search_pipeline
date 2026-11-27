@@ -17,18 +17,8 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s]: %(m
 # --------------------------------------------------
 # Base directory
 # --------------------------------------------------
-base_dir = os.getenv("PULSELINE_VER1_DIR")
-if not base_dir:
-    logging.error("PULSELINE_VER1_DIR not set")
-    sys.exit(1)
-
-# --------------------------------------------------
-# Add module paths
-# --------------------------------------------------
-for rel in ["input_file_dir_init/scripts", "scripts"]:
-    path = os.path.join(base_dir, rel)
-    if os.path.exists(path):
-        sys.path.insert(0, path)
+# Base directory and sys.path are defined once in pulseline_config.py
+from pulseline_config import base_dir
 
 from read_input_file_dir import load_parameters
 

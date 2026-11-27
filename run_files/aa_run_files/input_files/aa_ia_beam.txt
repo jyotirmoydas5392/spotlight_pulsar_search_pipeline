@@ -36,4 +36,4 @@ fdas_harm
 debug
 -analysis_debug
 -failsafe
-file /lustre_data/spotlight/data/51_068_20261101_101439/IABeamData/SN25AICO_20261101_112320.raw.fil
+file /lustre_data/spotlight/data/50_008B_20260630_073740/IABeamData/J1022+1001_50_008B_20260630_073740_BM40.fil
