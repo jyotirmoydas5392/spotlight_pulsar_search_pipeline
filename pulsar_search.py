@@ -6,6 +6,7 @@ import logging
 from pathlib import Path
 import subprocess
 import numpy as np
+from datetime import datetime
 from multiprocessing import Process
 
 # Setup logging
@@ -542,10 +543,13 @@ def main():
         with open(report_path, "a") as log_file:
             log_file.write(f"Executed scan: {data_id}\n")
         
-        #Update in global file as well
+        # Update in global file as well
         with open(global_report_path, "a") as global_log_file:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             global_log_file.write(
-                "Observation: {} | Executed scan: {}\n".format(scan_id, data_id)
+                "Observation: {} | Executed scan: {} | Date and Time: {}\n".format(
+                    scan_id, data_id, timestamp
+                )
             )
         
 
@@ -604,9 +608,7 @@ def main():
     #Step 16: Generate final status files
     # Final status summary (overwrite again)
     with open(report_path, "w") as log_file:
-        if len(executed_targets) == 0:
-            log_file.write("No target got executed, maybe the data recording is going on.\n")
-        elif len(executed_targets) == len(GTAC_scan):
+        if len(executed_targets) == len(GTAC_scan):
             log_file.write("All targets got executed successfully for the current run.\n")
         else:
             log_file.write("Partial execution: executed scans - " + ", ".join(executed_targets) + "\n")                                                   

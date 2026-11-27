@@ -188,8 +188,7 @@ def write_outputs_info(output_dir, data_id, band_id):
 
     print(f"Info file saved at: {info_file_path}")
 
-
-def copy_contents_only(input_dir, output_dir):
+def copy_contents_only(input_dir, output_dir, exclude_dirs=None):
     """
     Copies all contents (files and subdirectories) from input_dir to output_dir
     without copying the input_dir itself.
@@ -197,21 +196,28 @@ def copy_contents_only(input_dir, output_dir):
     Parameters:
     - input_dir: str, path to the source directory.
     - output_dir: str, path to the destination directory.
+    - exclude_dirs: list, names of directories to exclude from copying.
     """
     if not os.path.exists(input_dir):
         raise FileNotFoundError(f"Input directory '{input_dir}' does not exist.")
-    
+
     if not os.path.isdir(input_dir):
         raise NotADirectoryError(f"'{input_dir}' is not a directory.")
-    
+
     os.makedirs(output_dir, exist_ok=True)
+
+    if exclude_dirs is None:
+        exclude_dirs = []
 
     for item in os.listdir(input_dir):
         src_path = os.path.join(input_dir, item)
         dest_path = os.path.join(output_dir, item)
 
+        # Skip excluded directories
+        if os.path.isdir(src_path) and item in exclude_dirs:
+            continue
+
         if os.path.isdir(src_path):
             shutil.copytree(src_path, dest_path, dirs_exist_ok=True)
         else:
             shutil.copy2(src_path, dest_path)
-

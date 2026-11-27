@@ -64,7 +64,10 @@ def generate_final_outputs(scan_id, data_id, band_id):
         pngs_to_pdf(final_positive_outputs_input_dir, final_outputs_output_dir, data_id, "positively_classified")
         pngs_to_pdf(final_negative_outputs_input_dir, final_outputs_output_dir, data_id, "negatively_classified")
     else:
-        print("You are not runnign the classifier, so only the final output PDF containing all the folded profiles will be generated later on.")
+        print("You are not runnign the classifier, so only the final output PDF containing all the folded profiles will be generated.")
+        folding_output_dir = os.path.join(params.get("pulseline_output_dir"), data_id)
+        all_folded_candiadates_dir = os.path.join(folding_output_dir, "folded_outputs")
+        pngs_to_pdf(all_folded_candiadates_dir, final_outputs_output_dir, data_id, "all")
 
 
     # Copy one header file for observation information extraction
@@ -77,25 +80,22 @@ def generate_final_outputs(scan_id, data_id, band_id):
     write_outputs_info(final_outputs_output_dir, data_id, band_id)
 
     
-    # Define the additional paths to copy the required outputs
+    # Copy the classifier txt output and positive candidates only
+    if do_classify == 1:
+        classifier_output_dir = os.path.join(params.get('classifier_output_dir'), data_id)
+        classifier_output_copy_dir = os.path.join(final_outputs_output_dir, "classifier_outputs")
+        os.makedirs(classifier_output_copy_dir, exist_ok=True)
+
+        # Copy the required outputs
+        copy_contents_only(classifier_output_dir, classifier_output_copy_dir, exclude_dirs=["negative_candidates"])   # Copy classifier outputs
+
+    # Copy the folding outputs for CLASSIFIER traning later on
     folding_output_dir = os.path.join(params.get("pulseline_output_dir"), data_id)
     folding_output_copy_dir = os.path.join(final_outputs_output_dir, "folding_outputs")
-    classifier_output_copy_dir = os.path.join(final_outputs_output_dir, "classifier_outputs")
-
-    # Ensure output directory exists
     os.makedirs(folding_output_copy_dir, exist_ok=True)
 
     # Copy the required outputs
-    copy_contents_only(folding_output_dir, folding_output_copy_dir)           # Copy folding outputs
-
-    if do_classify == 1:
-        # Ensure output directory exists
-        os.makedirs(classifier_output_copy_dir, exist_ok=True)
-        copy_contents_only(classifier_output_dir, classifier_output_copy_dir)     # Copy classifier outputs if classifier is on.
-    
-    # Now genearte the final output PDF containing all the folded profiles, without classifiers contribution.
-    all_folded_candiadates_dir = os.path.join(folding_output_dir, "folded_outputs")
-    pngs_to_pdf(all_folded_candiadates_dir, final_outputs_output_dir, data_id, "all")
+    copy_contents_only(folding_output_dir, folding_output_copy_dir)     # Copy folding outputs
 
 
 def main():
